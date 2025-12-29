@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 高二物理 - 电场与磁场</title>
+    <link rel="stylesheet" href="../../style.css?v=20251224">
+    <!-- MathJax配置 -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <!-- 引入数据文件 -->
+    <script src="../../data/rootData.js"></script>
+    <script src="../../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../../js/modules/navigation.js"></script>
+    <script src="../../js/modules/englishTemplatesModule.js"></script>
+    <script src="../../js/modules/physicsModule.js"></script>
+    <script src="../../js/modules/wordRootModule.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="../../index.html" class="nav-link">返回首页</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 物理知识模块 -->
+        <section id="physics" class="module active">
+            <h4 style="text-align: center;">电场与磁场</h4>
+            <div class="math-container">
+                <div class="math-section">
+                    <div class="math-content">
+                        <h4>1. 电场强度</h4>
+                        <p><strong>定义式</strong>：$ E = \frac{F}{q} $（适用于任何电场）</p>
+                        <p><strong>点电荷的电场强度</strong>：$ E = k\frac{Q}{r^2} $（k为静电力常量，$ k = 9.0 \times 10^9 N\cdot m^2/C^2 $）</p>
+                        <p><strong>匀强电场的电场强度</strong>：$ E = \frac{U}{d} $（U为两点间的电势差，d为沿电场方向的距离）</p>
+                        
+                        <h4>2. 电势与电势差</h4>
+                        <p><strong>电势</strong>：$ \varphi = \frac{E_p}{q} $（E_p为电势能）</p>
+                        <p><strong>电势差</strong>：$ U_{AB} = \varphi_A - \varphi_B = \frac{W_{AB}}{q} $（W_AB为电场力做的功）</p>
+                        
+                        <h4>3. 磁场基本概念</h4>
+                        <p><strong>磁感应强度</strong>：$ B = \frac{F}{IL} $（F为安培力，I为电流，L为导线长度）</p>
+                        <p><strong>磁通量</strong>：$ \Phi = BScos \theta $（S为面积，θ为B与S的夹角）</p>
+                        
+                        <h4>4. 安培力与洛伦兹力</h4>
+                        <p><strong>安培力</strong>：$ F = BILsin \theta $（θ为B与I的夹角）</p>
+                        <p><strong>洛伦兹力</strong>：$ F = qvBsin \theta $（θ为B与v的夹角）</p>
+                        <p><strong>洛伦兹力提供向心力</strong>：$ qvB = m\frac{v^2}{r} $ ⇒ $ r = \frac{mv}{qB} $，周期$ T = \frac{2\pi m}{qB} $</p>
+                        
+                        <h5>典型例题</h5>
+                        <p><strong>例1（基础题）</strong>：在电场强度为2×10³ N/C的匀强电场中，有一个电荷量为5×10⁻⁶ C的点电荷，求该电荷所受的电场力大小。</p>
+                        <p><strong>解析</strong>：根据电场强度的定义式$ E = \frac{F}{q} $，可得电场力$ F = Eq = 2×10³ N/C × 5×10⁻⁶ C = 0.01 N $。</p>
+                        
+                        <p><strong>例2（中档题）</strong>：一个质量为m、电荷量为q的带电粒子，以速度v垂直进入磁感应强度为B的匀强磁场中，求粒子做圆周运动的半径和周期。</p>
+                        <p><strong>解析</strong>：洛伦兹力提供向心力，即$ qvB = m\frac{v^2}{r} $，解得半径$ r = \frac{mv}{qB} $；周期$ T = \frac{2\pi r}{v} = \frac{2\pi m}{qB} $。</p>
+                        
+                        <p><strong>例3（提高题）</strong>：在如图所示的平行板电容器中，两板间距离为d，板长为L，两板间电势差为U，一个质量为m、电荷量为q的带电粒子以初速度v₀沿水平方向射入电场，求粒子离开电场时的偏转距离和偏转角。</p>
+                        <p><strong>解析</strong>：粒子在电场中做类平抛运动，水平方向做匀速直线运动，运动时间$ t = \frac{L}{v₀} $；竖直方向做匀加速直线运动，加速度$ a = \frac{F}{m} = \frac{qE}{m} = \frac{qU}{md} $。偏转距离$ y = \frac{1}{2}at² = \frac{1}{2}×\frac{qU}{md}×(\frac{L}{v₀})² = \frac{qUL²}{2mdv₀²} $。偏转角θ的正切值$ tanθ = \frac{v_y}{v₀} = \frac{at}{v₀} = \frac{qUL}{mdv₀²} $。</p>
+                        
+                        <h5>常见错误分析</h5>
+                        <ul>
+                            <li><strong>错误1</strong>：混淆电场强度的定义式和点电荷电场强度的决定式。<br><strong>正确做法</strong>：$ E = \frac{F}{q} $是定义式，适用于任何电场；$ E = k\frac{Q}{r^2} $是决定式，只适用于真空中的点电荷电场。</li>
+                            <li><strong>错误2</strong>：在计算洛伦兹力时，忽略了速度方向与磁场方向的夹角。<br><strong>正确做法</strong>：洛伦兹力公式$ F = qvBsinθ $中的θ是速度方向与磁场方向的夹角，当v与B垂直时，F = qvB；当v与B平行时，F = 0。</li>
+                            <li><strong>错误3</strong>：认为安培力和洛伦兹力的方向与磁场方向相同。<br><strong>正确做法</strong>：安培力和洛伦兹力的方向都垂直于磁场方向和电流/速度方向，可用左手定则判断。</li>
+                        </ul>
+                        
+                        <h5>解题技巧总结</h5>
+                        <ul>
+                            <li>对于电场问题，要区分电场强度的定义式和决定式，理解电场线的性质和电势的分布规律。</li>
+                            <li>对于磁场问题，要掌握安培力和洛伦兹力的计算方法，理解左手定则的应用。</li>
+                            <li>对于带电粒子在磁场中的运动问题，要抓住洛伦兹力提供向心力这一关键点，结合圆周运动的公式求解。</li>
+                            <li>对于带电粒子在复合场中的运动问题，要分析粒子的受力情况，结合牛顿运动定律和运动学公式求解。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

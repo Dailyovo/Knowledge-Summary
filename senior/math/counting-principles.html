@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 高二数学 - 计数原理</title>
+    <link rel="stylesheet" href="../../style.css?v=20251224">
+    <!-- MathJax配置 -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <!-- 引入数据文件 -->
+    <script src="../../data/rootData.js"></script>
+    <script src="../../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../../js/modules/navigation.js"></script>
+    <script src="../../js/modules/englishTemplatesModule.js"></script>
+    <script src="../../js/modules/physicsModule.js"></script>
+    <script src="../../js/modules/wordRootModule.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="../../index.html" class="nav-link">返回首页</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 数学知识模块 -->
+        <section id="math" class="module active">
+            <h4 style="text-align: center;">四、计数原理</h4>
+            <div class="math-container">
+                <div class="math-section" id="counting-principles">
+                    
+                    <div class="math-content">
+                        <p><strong>概念阐释</strong>：计数原理是研究完成一件事情的不同方法数的数学分支，主要包括分类加法计数原理和分步乘法计数原理。它们是排列组合、概率统计等数学知识的基础。</p>
+                        
+                        <h4>1. 分类加法计数原理</h4>
+                        <p><strong>定义</strong>：完成一件事情，有n类办法，在第1类办法中有m₁种不同的方法，在第2类办法中有m₂种不同的方法，……，在第n类办法中有mₙ种不同的方法，那么完成这件事情共有：
+                        $$N = m₁ + m₂ + … + mₙ$$种不同的方法。</p>
+                        
+                        <p><strong>核心思想</strong>：“分类”，每类办法都能独立完成这件事。</p>
+                        
+                        <h4>2. 分步乘法计数原理</h4>
+                        <p><strong>定义</strong>：完成一件事情，需要分成n个步骤，做第1步有m₁种不同的方法，做第2步有m₂种不同的方法，……，做第n步有mₙ种不同的方法，那么完成这件事情共有：
+                        $$N = m₁ × m₂ × … × mₙ$$种不同的方法。</p>
+                        
+                        <p><strong>核心思想</strong>：“分步”，只有完成所有步骤才能完成这件事。</p>
+                        
+                        <h4>3. 排列</h4>
+                        <p><strong>定义</strong>：从n个不同元素中取出m(m ≤ n)个元素，按照一定的顺序排成一列，叫做从n个不同元素中取出m个元素的一个排列。</p>
+                        
+                        <p><strong>排列数公式</strong>：从n个不同元素中取出m(m ≤ n)个元素的所有排列的个数，叫做从n个不同元素中取出m个元素的排列数，记作Aₙᵐ（或Pₙᵐ），即：
+                        $$Aₙᵐ = n(n - 1)(n - 2)…(n - m + 1) = \frac{n!}{(n - m)!}$$</p>
+                        
+                        <p><strong>全排列</strong>：当m = n时，叫做n个不同元素的一个全排列，全排列数为：
+                        $$Aₙⁿ = n! = n × (n - 1) × (n - 2) × … × 2 × 1$$</p>
+                        
+                        <h4>4. 组合</h4>
+                        <p><strong>定义</strong>：从n个不同元素中取出m(m ≤ n)个元素并成一组，叫做从n个不同元素中取出m个元素的一个组合。</p>
+                        
+                        <p><strong>组合数公式</strong>：从n个不同元素中取出m(m ≤ n)个元素的所有组合的个数，叫做从n个不同元素中取出m个元素的组合数，记作Cₙᵐ（或ₙCₘ），即：
+                        $$Cₙᵐ = \frac{Aₙᵐ}{Aₘᵐ} = \frac{n(n - 1)(n - 2)…(n - m + 1)}{m!} = \frac{n!}{m!(n - m)!}$$</p>
+                        
+                        <p><strong>组合数的性质</strong>：</p>
+                        <ul>
+                            <li>Cₙᵐ = Cₙⁿ⁻ᵐ</li>
+                            <li>Cₙ⁺¹ᵐ = Cₙᵐ + Cₙᵐ⁻¹</li>
+                            <li>Cₙ⁰ = 1</li>
+                        </ul>
+                        
+                        <h4>5. 二项式定理</h4>
+                        <p><strong>二项式定理</strong>：对于任意正整数n，有：
+                        $$(a + b)^n = Cₙ⁰aⁿb⁰ + Cₙ¹aⁿ⁻¹b¹ + Cₙ²aⁿ⁻²b² + … + Cₙᵏaⁿ⁻ᵏbᵏ + … + Cₙⁿa⁰bⁿ$$</p>
+                        
+                        <p><strong>二项展开式的通项公式</strong>：第k+1项为：
+                        $$Tₖ₊₁ = Cₙᵏaⁿ⁻ᵏbᵏ$$（k = 0, 1, 2, …, n）</p>
+                        
+                        <p><strong>二项式系数的性质</strong>：</p>
+                        <ul>
+                            <li>对称性：与首末两端“等距离”的两个二项式系数相等，即Cₙᵏ = Cₙⁿ⁻ᵏ</li>
+                            <li>增减性与最大值：当k < (n + 1)/2时，二项式系数逐渐增大；当k > (n + 1)/2时，二项式系数逐渐减小。当n为偶数时，中间一项（第n/2 + 1项）的二项式系数最大；当n为奇数时，中间两项（第(n+1)/2项和第(n+3)/2项）的二项式系数相等且最大。</li>
+                            <li>各二项式系数的和：Cₙ⁰ + Cₙ¹ + Cₙ² + … + Cₙⁿ = 2ⁿ</li>
+                            <li>奇数项的二项式系数和等于偶数项的二项式系数和：Cₙ⁰ + Cₙ² + Cₙ⁴ + … = Cₙ¹ + Cₙ³ + Cₙ⁵ + … = 2ⁿ⁻¹</li>
+                        </ul>
+                        
+                        <h5>典型例题</h5>
+                        <p><strong>例1（基础题）</strong>：从10名学生中选出3名学生参加演讲比赛，有多少种不同的选法？</p>
+                        <p><strong>解析</strong>：这是一个组合问题，因为选出的3名学生不需要考虑顺序。根据组合数公式，
+                        $$C₁₀³ = \frac{10!}{3!(10 - 3)!} = \frac{10 × 9 × 8}{3 × 2 × 1} = 120$$
+                        所以有120种不同的选法。</p>
+                        
+                        <p><strong>例2（中档题）</strong>：用0, 1, 2, 3, 4这五个数字，可以组成多少个没有重复数字的三位数？</p>
+                        <p><strong>解析</strong>：这是一个排列问题，但需要注意百位不能为0。
+                        - 百位：有4种选择（1, 2, 3, 4）
+                        - 十位：有4种选择（剩下的4个数字）
+                        - 个位：有3种选择（剩下的3个数字）
+                        根据分步乘法计数原理，共有：4 × 4 × 3 = 48个没有重复数字的三位数。</p>
+                        
+                        <p><strong>例3（提高题）</strong>：求(2x - 1)⁶展开式中x³的系数。</p>
+                        <p><strong>解析</strong>：根据二项式定理，展开式的通项为：
+                        $$Tₖ₊₁ = C₆ᵏ(2x)⁶⁻ᵏ(-1)ᵏ = C₆ᵏ2⁶⁻ᵏ(-1)ᵏx⁶⁻ᵏ$$
+                        要求x³的系数，令6 - k = 3，解得k = 3。
+                        所以x³的系数为：
+                        $$C₆³2³(-1)³ = 20 × 8 × (-1) = -160$$</p>
+                        
+                        <h5>常见错误分析</h5>
+                        <ul>
+                            <li><strong>错误1</strong>：混淆排列和组合，在需要考虑顺序的问题中使用组合数公式，或在不需要考虑顺序的问题中使用排列数公式。<br><strong>正确做法</strong>：判断是否需要考虑顺序，有序用排列，无序用组合。</li>
+                            <li><strong>错误2</strong>：在计算排列数或组合数时，忽略了特殊限制条件，如数字排列中0不能在首位。<br><strong>正确做法</strong>：先处理特殊元素或特殊位置，再处理一般元素或位置。</li>
+                            <li><strong>错误3</strong>：在使用二项式定理时，误将通项公式中的k+1项当成第k项。<br><strong>正确做法</strong>：记住二项展开式的第k+1项是Tₖ₊₁，不是第k项。</li>
+                            <li><strong>错误4</strong>：在计算组合数时，误将Cₙᵐ写成Cₙⁿ⁻ᵐ的倒数。<br><strong>正确做法</strong>：Cₙᵐ = Cₙⁿ⁻ᵐ，不是倒数关系。</li>
+                        </ul>
+                        
+                        <h5>解题技巧总结</h5>
+                        <ul>
+                            <li>对于计数问题，先判断是分类还是分步，再选择对应的计数原理。</li>
+                            <li>区分排列和组合的关键是看是否需要考虑顺序，有序用排列，无序用组合。</li>
+                            <li>对于有特殊限制条件的计数问题，通常采用“特殊元素优先考虑”或“特殊位置优先考虑”的策略。</li>
+                            <li>在使用二项式定理时，要正确写出通项公式，并注意符号和系数的计算。</li>
+                            <li>灵活运用组合数的性质可以简化计算，如Cₙᵐ = Cₙⁿ⁻ᵐ和Cₙ⁺¹ᵐ = Cₙᵐ + Cₙᵐ⁻¹。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

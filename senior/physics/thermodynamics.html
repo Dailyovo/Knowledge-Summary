@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 高二物理 - 热力学定律</title>
+    <link rel="stylesheet" href="../../style.css?v=20251224">
+    <!-- MathJax配置 -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <!-- 引入数据文件 -->
+    <script src="../../data/rootData.js"></script>
+    <script src="../../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../../js/modules/navigation.js"></script>
+    <script src="../../js/modules/englishTemplatesModule.js"></script>
+    <script src="../../js/modules/physicsModule.js"></script>
+    <script src="../../js/modules/wordRootModule.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="../../index.html" class="nav-link">返回首页</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 物理知识模块 -->
+        <section id="physics" class="module active">
+            <h4 style="text-align: center;">热力学定律</h4>
+            <div class="physics-container">
+                <div class="physics-section">
+                    <div class="physics-content">
+                        <h4>1. 热力学第一定律</h4>
+                        <div class="concept-detail">
+                            <p>$ \Delta U = Q + W $（ΔU为内能变化，Q为吸收的热量，W为外界对物体做的功）</p>
+                            <p><strong>符号规定：</strong></p>
+                            <ul>
+                                <li>ΔU：内能增加为正，减少为负</li>
+                                <li>Q：吸收热量为正，放出热量为负</li>
+                                <li>W：外界对气体做功为正，气体对外做功为负</li>
+                            </ul>
+                        </div>
+                        
+                        <h4>2. 热力学第二定律</h4>
+                        <div class="concept-detail">
+                            <p><strong>克劳修斯表述：</strong>热量不可能自发地从低温物体传到高温物体</p>
+                            <p><strong>开尔文表述：</strong>不可能从单一热源吸收热量并把它全部用来做功，而不引起其他变化</p>
+                            <p><strong>实质：</strong>一切与热现象有关的宏观过程都具有方向性</p>
+                        </div>
+                        
+                        <h4>3. 理想气体状态方程</h4>
+                        <div class="concept-detail">
+                            <p>$ \frac{p_1V_1}{T_1} = \frac{p_2V_2}{T_2} $</p>
+                            
+                            <p><strong>特殊情况：</strong></p>
+                            <ul>
+                                <li><strong>等温变化</strong>：p₁V₁ = p₂V₂</li>
+                                <li><strong>等容变化</strong>：$ \frac{p_1}{T_1} = \frac{p_2}{T_2} $</li>
+                                <li><strong>等压变化</strong>：$ \frac{V_1}{T_1} = \frac{V_2}{T_2} $</li>
+                            </ul>
+                        </div>
+                        
+                        <h5>典型例题</h5>
+                        <div class="examples">
+                            <div class="example">
+                                <h6><strong>例1（基础题）</strong></h6>
+                                <p>一定质量的理想气体，在等容过程中，吸收了100 J的热量，求气体内能的变化。</p>
+                                <p><strong>解析</strong>：等容过程中，气体体积不变，外界对气体做功W = 0。根据热力学第一定律$ \Delta U = Q + W = 100 J + 0 = 100 J $，气体内能增加了100 J。</p>
+                            </div>
+                            
+                            <div class="example">
+                                <h6><strong>例2（中档题）</strong></h6>
+                                <p>一定质量的理想气体，在温度为27℃时，体积为0.02 m³，压强为1×10⁵ Pa。若保持压强不变，将温度升高到127℃，求气体的体积。</p>
+                                <p><strong>解析</strong>：根据理想气体状态方程的等压变化公式$ \frac{V_1}{T_1} = \frac{V_2}{T_2} $，其中T₁ = 27 + 273 = 300 K，V₁ = 0.02 m³，T₂ = 127 + 273 = 400 K。解得：</p>
+                                <p>$ V₂ = \frac{V_1T_2}{T_1} = \frac{0.02 m³ × 400 K}{300 K} ≈ 0.0267 m³ $</p>
+                            </div>
+                            
+                            <div class="example">
+                                <h6><strong>例3（提高题）</strong></h6>
+                                <p>一定质量的理想气体，从状态A(p₁, V₁, T₁)变化到状态B(p₂, V₂, T₂)，再变化到状态C(p₃, V₃, T₃)，最后回到状态A。已知状态A的温度为T₁，状态B的温度为T₂，状态C的温度为T₃，求整个循环过程中气体对外做的功和吸收的热量。</p>
+                                <p><strong>解析</strong>：整个循环过程中，气体回到初始状态，内能变化ΔU = 0。根据热力学第一定律ΔU = Q + W，得Q = -W。循环过程中气体对外做的功等于p-V图中循环曲线所围的面积，吸收的热量等于对外做的功的负值。</p>
+                            </div>
+                        </div>
+                        
+                        <h5>常见错误分析</h5>
+                        <div class="error-analysis">
+                            <ul>
+                                <li><strong>错误1</strong>：混淆热力学第一定律中各物理量的符号。<br><strong>正确做法</strong>：ΔU：内能增加为正，减少为负；Q：吸收热量为正，放出热量为负；W：外界对气体做功为正，气体对外做功为负。</li>
+                                <li><strong>错误2</strong>：在使用理想气体状态方程时，忽略了温度的单位。<br><strong>正确做法</strong>：理想气体状态方程中的温度必须使用热力学温度（K），而不是摄氏温度（℃）。</li>
+                                <li><strong>错误3</strong>：认为热力学第二定律否定了能量守恒定律。<br><strong>正确做法</strong>：热力学第二定律是关于能量转化方向的定律，而能量守恒定律是关于能量总量的定律，两者并不矛盾。</li>
+                            </ul>
+                        </div>
+                        
+                        <h5>解题技巧总结</h5>
+                        <div class="tips">
+                            <ul>
+                                <li>对于热力学第一定律问题，要明确各物理量的符号规定，结合具体过程分析内能变化、热量传递和做功情况。</li>
+                                <li>使用理想气体状态方程时，要注意温度的单位必须是热力学温度，同时要根据过程特点选择合适的特殊形式（等温、等容、等压）。</li>
+                                <li>理解热力学第二定律的两种表述，明确热量传递的方向性和能量转化的方向性。</li>
+                                <li>对于循环过程，要注意内能变化为零，吸收的热量等于对外做的功的负值。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

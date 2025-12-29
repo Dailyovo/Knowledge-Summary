@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 词根学习</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- MathJax配置 -->
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['(', ')'], ['\\(', '\\)'], ['$', '$']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['noerrors']}
+            },
+            options: {
+                renderActions: {
+                    addMenu: [0, '', '']
+                }
+            }
+        };
+    </script>
+    <!-- 引入数据文件 -->
+    <script src="../data/rootData.js"></script>
+    <script src="../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../js/modules/navigation.js"></script>
+    <script src="../js/modules/englishTemplatesModule.js"></script>
+    <script src="../js/modules/physicsModule.js"></script>
+    <script src="../js/modules/wordRootModule.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <a href="../index.html" class="nav-btn">返回首页</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 词根学习模块 -->
+        <section id="word-root" class="module active">
+            <h4 style="text-align: center;">词根学习</h4>
+            <div class="word-root-container">
+                <div class="root-selector">
+                    <h4 style="text-align: center;">选择词根</h4>
+                    <div class="search-container">
+                        <input type="text" id="root-search" placeholder="搜索词根..." class="search-input">
+                        <button id="search-btn" class="search-btn">🔍</button>
+                    </div>
+                    <div class="root-buttons"></div>
+                </div>
+                <div class="word-display">
+                    <div class="root-info">
+                        <h3 id="root-title"></h3>
+                        <div class="pronunciation">
+                            <span id="root-pronunciation"></span>
+                            <button id="play-audio" class="audio-btn" title="播放读音">🔊</button>
+                        </div>
+                        <p id="root-meaning"></p>
+                    </div>
+                    <div class="word-image">
+                        <div id="image-container"></div>
+                    </div>
+                    <div class="word-list">
+                        <h4>相关单词</h4>
+                        <ul id="words"></ul>
+                    </div>
+                    <div class="examples">
+                        <h4>例句</h4>
+                        <div id="examples-list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

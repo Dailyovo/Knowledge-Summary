@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 声学学习</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- MathJax配置 -->
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['(', ')'], ['\\(', '\\)'], ['$', '$']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['noerrors']}
+            },
+            options: {
+                renderActions: {
+                    addMenu: [0, '', '']
+                }
+            }
+        };
+    </script>
+    <!-- 引入数据文件 -->
+    <script src="../data/rootData.js"></script>
+    <script src="../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../js/modules/navigation.js"></script>
+    <script src="../js/modules/englishTemplatesModule.js"></script>
+    <script src="../js/modules/physicsModule.js"></script>
+    <script src="../js/modules/wordRootModule.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="../index.html" class="nav-link">返回首页</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 声学学习模块 -->
+        <section id="acoustics" class="module active">
+            <h4 style="text-align: center;">声学学习</h4>
+            <div class="math-container">
+                <div class="math-section">
+                    <h4 style="text-align: center;">声音的产生与传播</h4>
+                    <div class="math-content">
+                        <h4>声音的产生</h4>
+                        <div class="concept-detail">
+                                <p><strong>声音的产生条件</strong>：声音是由物体的振动产生的。振动停止，发声也停止。</p>
+                                <p><strong>声源</strong>：正在发声的物体叫做声源。固体、液体、气体都可以作为声源。</p>
+                                <p><strong>典型实例</strong>：
+                                    <ul>
+                                        <li>人说话时，声带振动发声</li>
+                                        <li>鼓面振动发声</li>
+                                        <li>水流撞击石头振动发声</li>
+                                        <li>空气振动产生风声</li>
+                                    </ul>
+                                </p>
+                        </div>
+                        
+                        <h4>声音的传播</h4>
+                        <div class="concept-detail">
+                                <p><strong>传播条件</strong>：声音的传播需要介质，真空不能传声。</p>
+                                <p><strong>介质</strong>：能够传播声音的物质叫做介质。固体、液体、气体都可以作为传播声音的介质。</p>
+                                <p><strong>传播形式</strong>：声音以声波的形式传播。声波是一种机械波，具有能量。</p>
+                        </div>
+                        
+                        <h4>声速</h4>
+                        <div class="concept-detail">
+                                <p><strong>声速</strong>：声音在介质中传播的速度叫做声速。</p>
+                                <p><strong>影响因素</strong>：
+                                    <ul>
+                                        <li>介质的种类：一般情况下，声音在固体中传播最快，液体中次之，气体中最慢。</li>
+                                        <li>介质的温度：同一介质中，温度越高，声速越快。</li>
+                                    </ul>
+                                </p>
+                                <p><strong>数值</strong>：15℃时，声音在空气中的传播速度约为340m/s。</p>
+                        </div>
+                        
+                        <h4>回声</h4>
+                        <div class="concept-detail">
+                                <p><strong>回声</strong>：声音在传播过程中遇到障碍物被反射回来的现象叫做回声。</p>
+                                <p><strong>听到回声的条件</strong>：回声到达人耳的时间比原声晚0.1秒以上，人耳才能把回声和原声区分开。</p>
+                                <p><strong>应用</strong>：利用回声可以测量距离，如声呐探测、超声测距等。</p>
+                                <p><strong>公式</strong>：距离s = v × t / 2，其中v是声速，t是从发声到听到回声的时间。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="math-section">
+                    <h4 style="text-align: center;">声音的特性</h4>
+                    <div class="math-content">
+                        <h4>音调</h4>
+                        <div class="concept-detail">
+                                <p><strong>音调</strong>：声音的高低叫做音调。</p>
+                                <p><strong>影响因素</strong>：音调由发声体振动的频率决定。频率越高，音调越高；频率越低，音调越低。</p>
+                                <p><strong>频率</strong>：物体每秒内振动的次数叫做频率，单位是赫兹（Hz）。</p>
+                                <p><strong>人耳的听觉范围</strong>：人耳能听到的声音频率范围是20Hz～20000Hz。高于20000Hz的声音叫做超声波，低于20Hz的声音叫做次声波。</p>
+                        </div>
+                        
+                        <h4>响度</h4>
+                        <div class="concept-detail">
+                                <p><strong>响度</strong>：声音的强弱叫做响度。</p>
+                                <p><strong>影响因素</strong>：
+                                    <ul>
+                                        <li>振幅：发声体振动的幅度叫做振幅。振幅越大，响度越大；振幅越小，响度越小。</li>
+                                        <li>距离：距离发声体越近，响度越大；距离发声体越远，响度越小。</li>
+                                    </ul>
+                                </p>
+                                <p><strong>单位</strong>：响度的单位是分贝（dB）。0dB是人耳能听到的最微弱的声音，30dB～40dB是较理想的安静环境。</p>
+                        </div>
+                        
+                        <h4>音色</h4>
+                        <div class="concept-detail">
+                                <p><strong>音色</strong>：声音的品质和特色叫做音色。</p>
+                                <p><strong>影响因素</strong>：音色由发声体的材料、结构和发声方式决定。不同的发声体，即使音调和响度相同，音色也不同。</p>
+                                <p><strong>应用</strong>：根据音色可以辨别不同的发声体，如不同人的声音、不同乐器的声音等。</p>
+                        </div>
+                        
+                        <h4>声音特性的对比</h4>
+                        <div class="concept-detail">
+                                <table class="imaging-table">
+                                    <thead>
+                                        <tr>
+                                            <th>特性</th>
+                                            <th>概念</th>
+                                            <th>影响因素</th>
+                                            <th>描述词语</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>音调</td>
+                                            <td>声音的高低</td>
+                                            <td>频率</td>
+                                            <td>高低、尖锐、低沉</td>
+                                        </tr>
+                                        <tr>
+                                            <td>响度</td>
+                                            <td>声音的强弱</td>
+                                            <td>振幅、距离</td>
+                                            <td>大小、响亮、微弱</td>
+                                        </tr>
+                                        <tr>
+                                            <td>音色</td>
+                                            <td>声音的品质</td>
+                                            <td>材料、结构</td>
+                                            <td>悦耳、难听、不同乐器</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="math-section">
+                    <h4 style="text-align: center;">噪声的危害与控制</h4>
+                    <div class="math-content">
+                        <h4>噪声的定义</h4>
+                        <div class="concept-detail">
+                                <p><strong>物理定义</strong>：从物理学角度看，噪声是发声体做无规则振动时发出的声音。</p>
+                                <p><strong>环保定义</strong>：从环境保护角度看，凡是妨碍人们正常休息、学习和工作的声音，以及对人们要听的声音产生干扰的声音，都属于噪声。</p>
+                        </div>
+                        
+                        <h4>噪声的等级和危害</h4>
+                        <div class="concept-detail">
+                                <p><strong>等级划分</strong>：噪声的等级用分贝（dB）表示。</p>
+                                <p><strong>危害</strong>：
+                                    <ul>
+                                        <li>0dB：人耳能听到的最微弱的声音</li>
+                                        <li>30dB～40dB：较理想的安静环境</li>
+                                        <li>70dB：会影响人们的正常学习和工作</li>
+                                        <li>90dB：会损坏听力，影响身体健康</li>
+                                        <li>150dB：会导致鼓膜破裂，双耳失聪</li>
+                                    </ul>
+                                </p>
+                        </div>
+                        
+                        <h4>噪声的控制</h4>
+                        <div class="concept-detail">
+                                <p><strong>控制途径</strong>：
+                                    <ul>
+                                        <li><strong>在声源处减弱</strong>：防止噪声产生，如安装消声器、禁止鸣笛等。</li>
+                                        <li><strong>在传播过程中减弱</strong>：阻断噪声传播，如设置隔音墙、植树造林等。</li>
+                                        <li><strong>在人耳处减弱</strong>：防止噪声进入人耳，如戴耳塞、耳罩等。</li>
+                                    </ul>
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="math-section">
+                    <h4 style="text-align: center;">声的利用</h4>
+                    <div class="math-content">
+                        <h4>声音可以传递信息</h4>
+                        <div class="concept-detail">
+                                <p><strong>应用实例</strong>：
+                                    <ul>
+                                        <li>回声定位：声呐探测、蝙蝠导航</li>
+                                        <li>医疗诊断：B超检查、听诊器</li>
+                                        <li>工业检测：超声波探伤、超声检测</li>
+                                        <li>生活应用：语音通信、广播、雷达</li>
+                                    </ul>
+                                </p>
+                        </div>
+                        
+                        <h4>声音可以传递能量</h4>
+                        <div class="concept-detail">
+                                <p><strong>应用实例</strong>：
+                                    <ul>
+                                        <li>超声波清洗：清洗精密仪器、眼镜</li>
+                                        <li>超声波碎石：击碎体内结石</li>
+                                        <li>超声波焊接：焊接塑料、金属</li>
+                                        <li>声波灭火：利用声波振动熄灭火灾</li>
+                                    </ul>
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="math-section">
+                    <h4 style="text-align: center;">典型例题</h4>
+                    <div class="math-content">
+                        <div class="example">
+                            <h5>例题1：基础题</h5>
+                                <p>关于声音的产生和传播，下列说法正确的是（ ）</p>
+                                <p>A. 声音可以在真空中传播</p>
+                                <p>B. 声音是由物体的振动产生的</p>
+                                <p>C. 声音的传播速度与介质的温度无关</p>
+                                <p>D. 声音在固体中传播速度比在空气中慢</p>
+                                <p><strong>答案</strong>：B</p>
+                                <p><strong>解析</strong>：声音的传播需要介质，真空不能传声，故A错误；声音是由物体的振动产生的，故B正确；声音的传播速度与介质的温度有关，温度越高，传播速度越快，故C错误；声音在固体中传播速度比在空气中快，故D错误。</p>
+                            </div>
+                            
+                            <div class="example">
+                                <h5>例题2：中等题</h5>
+                                <p>在长为1000m的一根铁管两端有甲、乙两个同学，若乙同学在长铁管的一端敲一下铁管，甲同学把耳朵贴在长铁管的另一端听到两次声音的时间间隔为2.75s，求声音在铁中的传播速度。（已知声音在空气中的传播速度是340m/s）</p>
+                                <p><strong>答案</strong>：5200m/s</p>
+                                <p><strong>解析</strong>：设声音在铁中的传播速度为v铁，根据题意得：
+                                <br>声音在空气中的传播时间t1 = s / v空 = 1000m / 340m/s ≈ 2.94s
+                                <br>声音在铁中的传播时间t2 = s / v铁 = 1000m / v铁
+                                <br>时间间隔Δt = t1 - t2 = 2.75s
+                                <br>即2.94s - 1000m / v铁 = 2.75s
+                                <br>解得v铁 = 1000m / (2.94s - 2.75s) ≈ 5200m/s</p>
+                            </div>
+                            
+                            <div class="example">
+                                <h5>例题3：提高题</h5>
+                                <p>一辆汽车以10m/s的速度向一座高山驶去，司机在某处鸣笛，鸣笛后3s听到回声，求汽车鸣笛处到高山的距离。（已知声音在空气中的传播速度是340m/s）</p>
+                                <p><strong>答案</strong>：525m</p>
+                                <p><strong>解析</strong>：设汽车鸣笛处到高山的距离为s，根据题意得：
+                                <br>在3s内，汽车行驶的距离s车 = v车 × t = 10m/s × 3s = 30m
+                                <br>在3s内，声音传播的距离s声 = v声 × t = 340m/s × 3s = 1020m
+                                <br>根据题意，s车 + 2s = s声
+                                <br>即30m + 2s = 1020m
+                                <br>解得s = (1020m - 30m) / 2 = 525m</p>
+                            </div>
+                    </div>
+                </div>
+                
+                <div class="math-section">
+                    <h4 style="text-align: center;">实验探究</h4>
+                    <div class="math-content">
+                        <h4>探究声音的产生条件</h4>
+                        <div class="concept-detail">
+                                <p><strong>实验目的</strong>：探究声音产生的条件</p>
+                                <p><strong>实验器材</strong>：音叉、乒乓球、细线、铁架台、小锤</p>
+                                <p><strong>实验步骤</strong>：
+                                    <ol>
+                                        <li>将乒乓球用细线悬挂在铁架台上，调整乒乓球的位置，使其刚好能接触到静止的音叉</li>
+                                        <li>用小锤敲击音叉，观察乒乓球的运动情况</li>
+                                        <li>停止敲击音叉，观察乒乓球的运动情况</li>
+                                    </ol>
+                                </p>
+                                <p><strong>实验现象</strong>：敲击音叉时，音叉发声，乒乓球被弹开；停止敲击后，音叉停止发声，乒乓球停止运动。</p>
+                                <p><strong>实验结论</strong>：声音是由物体的振动产生的。</p>
+                        </div>
+                        
+                        <h4>探究影响音调的因素</h4>
+                        <div class="concept-detail">
+                                <p><strong>实验目的</strong>：探究影响音调的因素</p>
+                                <p><strong>实验器材</strong>：钢尺、桌面</p>
+                                <p><strong>实验步骤</strong>：
+                                    <ol>
+                                        <li>将钢尺的一端紧压在桌面上，另一端伸出桌面</li>
+                                        <li>用相同的力拨动钢尺，改变钢尺伸出桌面的长度，观察钢尺振动的快慢和发出声音的音调</li>
+                                        <li>记录不同伸出长度下的振动快慢和音调</li>
+                                    </ol>
+                                </p>
+                                <p><strong>实验现象</strong>：钢尺伸出桌面越短，振动越快，音调越高；钢尺伸出桌面越长，振动越慢，音调越低。</p>
+                                <p><strong>实验结论</strong>：音调由发声体振动的频率决定，频率越高，音调越高。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="math-section">
+                    <h4 style="text-align: center;">拓展阅读</h4>
+                    <div class="math-content">
+                        <h4>超声波的应用</h4>
+                        <div class="concept-detail">
+                                <p>超声波是频率高于20000Hz的声波，具有方向性好、穿透能力强、易于获得较集中的声能等特点，在生产、医疗、科学研究等方面有广泛的应用：</p>
+                                <ul>
+                                    <li><strong>医疗领域</strong>：B超检查、超声波碎石、超声波清洗</li>
+                                    <li><strong>工业领域</strong>：超声波探伤、超声波焊接、超声波清洗</li>
+                                    <li><strong>农业领域</strong>：超声波育种、超声波灭虫</li>
+                                    <li><strong>军事领域</strong>：声呐探测、水下通信</li>
+                                </ul>
+                        </div>
+                        
+                        <h4>次声波的危害与应用</h4>
+                        <div class="concept-detail">
+                                <p>次声波是频率低于20Hz的声波，具有传播距离远、穿透能力强等特点：</p>
+                                <ul>
+                                    <li><strong>危害</strong>：次声波会对人体造成危害，如引起头痛、恶心、呕吐等症状，严重时甚至会导致死亡。</li>
+                                    <li><strong>应用</strong>：次声波可以用于预测自然灾害（如地震、海啸）、监测核爆炸等。</li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="math-section">
+                    <h4 style="text-align: center;">实践活动</h4>
+                    <div class="math-content">
+                        <h4>自制乐器</h4>
+                        <div class="concept-detail">
+                                <p><strong>活动目标</strong>：学会自制简单的乐器，了解声音的特性</p>
+                                <p><strong>活动材料</strong>：玻璃杯、水、筷子</p>
+                                <p><strong>活动步骤</strong>：
+                                    <ol>
+                                        <li>准备5个相同的玻璃杯，分别装入不同量的水</li>
+                                        <li>用筷子敲击玻璃杯，听声音的音调</li>
+                                        <li>调整每个玻璃杯中水的量，使它们能发出不同音调的声音</li>
+                                        <li>尝试用自制的乐器演奏简单的乐曲</li>
+                                    </ol>
+                                </p>
+                                <p><strong>思考问题</strong>：为什么不同水量的玻璃杯发出的声音音调不同？</p>
+                        </div>
+                        
+                        <h4>测量声音的速度</h4>
+                        <div class="concept-detail">
+                                <p><strong>活动目标</strong>：学会测量声音的速度</p>
+                                <p><strong>活动材料</strong>：秒表、尺子</p>
+                                <p><strong>活动步骤</strong>：
+                                    <ol>
+                                        <li>选择一个空旷的场地，测量出一段距离（如100m）</li>
+                                        <li>一名同学在一端发出声音信号（如敲击木板），另一名同学在另一端用秒表测量从看到信号到听到声音的时间</li>
+                                        <li>根据公式v = s / t计算声音的速度</li>
+                                        <li>重复测量多次，取平均值，提高测量的准确性</li>
+                                    </ol>
+                                </p>
+                                <p><strong>思考问题</strong>：测量结果与标准声速有差异的原因是什么？</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="math-section">
+                    <h4 style="text-align: center;">知识网络</h4>
+                    <div class="math-content">
+                        <h4>声学知识体系</h4>
+                        <div class="concept-detail">
+                                <ul>
+                                    <li><strong>声音的产生与传播</strong>
+                                        <ul>
+                                            <li>声音由物体振动产生</li>
+                                            <li>声音的传播需要介质</li>
+                                            <li>声速：340m/s（15℃空气）</li>
+                                            <li>回声现象及应用</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>声音的特性</strong>
+                                        <ul>
+                                            <li>音调：由频率决定</li>
+                                            <li>响度：由振幅和距离决定</li>
+                                            <li>音色：由材料和结构决定</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>噪声的危害与控制</strong>
+                                        <ul>
+                                            <li>噪声的定义</li>
+                                            <li>噪声的等级和危害</li>
+                                            <li>噪声的控制途径</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>声的利用</strong>
+                                        <ul>
+                                            <li>传递信息</li>
+                                            <li>传递能量</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

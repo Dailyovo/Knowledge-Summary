@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 力学学习</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- MathJax配置 -->
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['(', ')'], ['\\(', '\\)'], ['$', '$']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['noerrors']}
+            },
+            options: {
+                renderActions: {
+                    addMenu: [0, '', '']
+                }
+            }
+        };
+    </script>
+    <!-- 引入数据文件 -->
+    <script src="../data/rootData.js"></script>
+    <script src="../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../js/modules/navigation.js"></script>
+    <script src="../js/modules/englishTemplatesModule.js"></script>
+    <script src="../js/modules/physicsModule.js"></script>
+    <script src="../js/modules/wordRootModule.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <a href="../index.html" class="nav-btn">返回首页</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 力学学习模块 -->
+        <section id="mechanics" class="module active">
+            <h4 style="text-align: center;">力学学习</h4>
+            <div class="math-container">
+                <!-- 1. 力的基本概念 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">力的基本概念</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>力的定义</h4>
+                                <p><strong>力</strong>：力是物体对物体的作用。</p>
+                                <p><strong>力的性质</strong>：
+                                    <ul>
+                                        <li><strong>物质性</strong>：力不能脱离物体而存在，必须有施力物体和受力物体。</li>
+                                        <li><strong>相互性</strong>：力的作用是相互的，施力物体同时也是受力物体，受力物体同时也是施力物体。</li>
+                                        <li><strong>矢量性</strong>：力是矢量，既有大小，又有方向。</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>力的三要素</h4>
+                                <p><strong>力的三要素</strong>：力的大小、方向和作用点叫做力的三要素。</p>
+                                <p><strong>影响力的作用效果</strong>：力的三要素都能影响力的作用效果。</p>
+                                <p><strong>力的示意图</strong>：用带箭头的线段表示力的三要素的图叫做力的示意图。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>力的单位</h4>
+                                <p><strong>国际单位</strong>：牛顿，简称牛，符号是N。</p>
+                                <p><strong>1N的大小</strong>：托起两个鸡蛋所用的力大约是1N。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2. 弹力 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">弹力</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>弹性和塑性</h4>
+                                <p><strong>弹性</strong>：物体在受力时会发生形变，不受力时又恢复到原来的形状的性质叫做弹性。</p>
+                                <p><strong>塑性</strong>：物体在受力时会发生形变，不受力时不能恢复到原来的形状的性质叫做塑性。</p>
+                                <p><strong>弹性形变</strong>：物体在弹性限度内发生的形变叫做弹性形变。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>弹力</h4>
+                                <p><strong>弹力</strong>：物体由于发生弹性形变而产生的力叫做弹力。</p>
+                                <p><strong>产生条件</strong>：
+                                    <ul>
+                                        <li>物体间相互接触</li>
+                                        <li>物体发生弹性形变</li>
+                                    </ul>
+                                </p>
+                                <p><strong>常见弹力</strong>：压力、支持力、拉力、推力等。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>弹簧测力计</h4>
+                                <p><strong>用途</strong>：测量力的大小的工具。</p>
+                                <p><strong>原理</strong>：在弹性限度内，弹簧的伸长量与所受的拉力成正比。</p>
+                                <p><strong>使用方法</strong>：
+                                    <ul>
+                                        <li>观察量程和分度值</li>
+                                        <li>检查指针是否指在零刻度线处</li>
+                                        <li>拉力方向与弹簧轴线方向一致</li>
+                                        <li>读数时视线与刻度板垂直</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3. 重力 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">重力</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>重力的定义</h4>
+                                <p><strong>重力</strong>：由于地球的吸引而使物体受到的力叫做重力，用符号G表示。</p>
+                                <p><strong>重力的施力物体</strong>：地球。</p>
+                                <p><strong>重力的方向</strong>：竖直向下。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>重力的大小</h4>
+                                <p><strong>计算公式</strong>：G = mg，其中g是重力加速度，g ≈ 9.8N/kg。</p>
+                                <p><strong>g的物理意义</strong>：质量为1kg的物体受到的重力是9.8N。</p>
+                                <p><strong>影响因素</strong>：重力的大小与物体的质量成正比。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>重心</h4>
+                                <p><strong>重心</strong>：重力在物体上的等效作用点叫做重心。</p>
+                                <p><strong>重心的位置</strong>：
+                                    <ul>
+                                        <li>质量分布均匀、形状规则的物体，重心在其几何中心上。</li>
+                                        <li>质量分布不均匀或形状不规则的物体，重心可用悬挂法或支撑法确定。</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 4. 摩擦力 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">摩擦力</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>摩擦力的定义</h4>
+                                <p><strong>摩擦力</strong>：两个相互接触的物体，当它们发生相对运动或有相对运动趋势时，在接触面上会产生一种阻碍相对运动或相对运动趋势的力叫做摩擦力。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>摩擦力的分类</h4>
+                                <p><strong>静摩擦力</strong>：两个相互接触的物体，当它们有相对运动趋势但尚未发生相对运动时，在接触面上产生的摩擦力叫做静摩擦力。</p>
+                                <p><strong>滑动摩擦力</strong>：两个相互接触的物体，当它们发生相对滑动时，在接触面上产生的摩擦力叫做滑动摩擦力。</p>
+                                <p><strong>滚动摩擦力</strong>：一个物体在另一个物体表面上滚动时产生的摩擦力叫做滚动摩擦力。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>影响滑动摩擦力大小的因素</h4>
+                                <p><strong>压力大小</strong>：接触面粗糙程度相同时，压力越大，滑动摩擦力越大。</p>
+                                <p><strong>接触面的粗糙程度</strong>：压力相同时，接触面越粗糙，滑动摩擦力越大。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>增大和减小摩擦力的方法</h4>
+                                <p><strong>增大摩擦力的方法</strong>：
+                                    <ul>
+                                        <li>增大压力</li>
+                                        <li>增大接触面的粗糙程度</li>
+                                    </ul>
+                                </p>
+                                <p><strong>减小摩擦力的方法</strong>：
+                                    <ul>
+                                        <li>减小压力</li>
+                                        <li>减小接触面的粗糙程度</li>
+                                        <li>用滚动代替滑动</li>
+                                        <li>使接触面分离（如加润滑油、气垫、磁悬浮等）</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5. 牛顿第一定律 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">牛顿第一定律</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>牛顿第一定律的内容</h4>
+                                <p><strong>牛顿第一定律</strong>：一切物体在没有受到力的作用时，总保持静止状态或匀速直线运动状态。</p>
+                                <p><strong>惯性</strong>：物体保持原来运动状态不变的性质叫做惯性。</p>
+                                <p><strong>惯性的大小</strong>：惯性的大小只与物体的质量有关，质量越大，惯性越大。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>牛顿第一定律的实验探究</h4>
+                                <p><strong>实验目的</strong>：探究阻力对物体运动的影响。</p>
+                                <p><strong>实验器材</strong>：斜面、小车、毛巾、棉布、木板。</p>
+                                <p><strong>实验步骤</strong>：
+                                    <ol>
+                                        <li>让小车从斜面的同一高度由静止滑下，观察小车在不同表面上滑行的距离。</li>
+                                        <li>在水平桌面上依次铺上毛巾、棉布、木板，改变水平面的粗糙程度。</li>
+                                        <li>记录小车在不同表面上滑行的距离。</li>
+                                    </ol>
+                                </p>
+                                <p><strong>实验现象</strong>：小车在毛巾表面上滑行的距离最短，在木板表面上滑行的距离最长。</p>
+                                <p><strong>实验结论</strong>：平面越光滑，小车受到的阻力越小，速度减小得越慢，滑行的距离越远。</p>
+                                <p><strong>推理</strong>：如果平面绝对光滑，小车将以恒定不变的速度永远运动下去。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 6. 二力平衡 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">二力平衡</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>平衡状态</h4>
+                                <p><strong>平衡状态</strong>：物体保持静止状态或匀速直线运动状态叫做平衡状态。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>二力平衡的条件</h4>
+                                <p><strong>二力平衡</strong>：物体在两个力的作用下保持平衡状态，叫做二力平衡。</p>
+                                <p><strong>二力平衡的条件</strong>：
+                                    <ul>
+                                        <li>作用在同一物体上</li>
+                                        <li>大小相等</li>
+                                        <li>方向相反</li>
+                                        <li>作用在同一直线上</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>二力平衡和相互作用力的区别</h4>
+                                <table class="imaging-table">
+                                    <thead>
+                                        <tr>
+                                            <th>比较项目</th>
+                                            <th>二力平衡</th>
+                                            <th>相互作用力</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>受力物体</td>
+                                            <td>作用在同一物体上</td>
+                                            <td>作用在两个不同物体上</td>
+                                        </tr>
+                                        <tr>
+                                            <td>力的性质</td>
+                                            <td>可以是不同性质的力</td>
+                                            <td>一定是相同性质的力</td>
+                                        </tr>
+                                        <tr>
+                                            <td>同时性</td>
+                                            <td>一个力消失，另一个力可以存在</td>
+                                            <td>同时产生，同时消失</td>
+                                        </tr>
+                                        <tr>
+                                            <td>作用效果</td>
+                                            <td>使物体保持平衡状态</td>
+                                            <td>分别对两个物体产生作用效果</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 7. 典型例题 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">典型例题</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="example">
+                                <h5>基础题</h5>
+                                <p>关于力的概念，下列说法正确的是（ ）</p>
+                                <p>A. 力是维持物体运动的原因</p>
+                                <p>B. 力可以脱离物体而存在</p>
+                                <p>C. 力的作用是相互的</p>
+                                <p>D. 只有相互接触的物体才会产生力的作用</p>
+                                <p><strong>答案</strong>：C</p>
+                                <p><strong>解析</strong>：力不是维持物体运动的原因，而是改变物体运动状态的原因，故A错误；力不能脱离物体而存在，必须有施力物体和受力物体，故B错误；力的作用是相互的，故C正确；不相互接触的物体也可以产生力的作用，如重力、磁力等，故D错误。</p>
+                            </div>
+                            
+                            <div class="example">
+                                <h5>中等题</h5>
+                                <p>一个质量为50kg的人，受到的重力是多少？（g取10N/kg）</p>
+                                <p><strong>答案</strong>：500N</p>
+                                <p><strong>解析</strong>：根据重力的计算公式G = mg，其中m = 50kg，g = 10N/kg，代入得G = 50kg × 10N/kg = 500N。</p>
+                            </div>
+                            
+                            <div class="example">
+                                <h5>提高题</h5>
+                                <p>如图所示，用弹簧测力计沿水平方向拉着一个木块在水平木板上做匀速直线运动，弹簧测力计的示数为3N。则木块受到的摩擦力是多少？如果将拉力增大到5N，木块受到的摩擦力将如何变化？</p>
+                                <p><strong>答案</strong>：3N；不变</p>
+                                <p><strong>解析</strong>：木块在水平木板上做匀速直线运动，处于平衡状态，拉力和摩擦力是一对平衡力，大小相等，所以摩擦力f = F = 3N。如果将拉力增大到5N，木块受到的压力和接触面的粗糙程度都不变，所以摩擦力不变，仍为3N。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 8. 实验探究 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">实验探究</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>探究弹簧测力计的原理</h4>
+                                <p><strong>实验目的</strong>：探究弹簧的伸长量与所受拉力的关系。</p>
+                                <p><strong>实验器材</strong>：弹簧、钩码、刻度尺。</p>
+                                <p><strong>实验步骤</strong>：
+                                    <ol>
+                                        <li>测量弹簧的原长L0。</li>
+                                        <li>在弹簧下端挂1个钩码，测量弹簧的长度L1，计算弹簧的伸长量ΔL1 = L1 - L0。</li>
+                                        <li>在弹簧下端挂2个钩码，测量弹簧的长度L2，计算弹簧的伸长量ΔL2 = L2 - L0。</li>
+                                        <li>重复步骤3，挂3个、4个、5个钩码，记录数据。</li>
+                                        <li>分析数据，得出结论。</li>
+                                    </ol>
+                                </p>
+                                <p><strong>实验结论</strong>：在弹性限度内，弹簧的伸长量与所受的拉力成正比。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>探究影响滑动摩擦力大小的因素</h4>
+                                <p><strong>实验目的</strong>：探究影响滑动摩擦力大小的因素。</p>
+                                <p><strong>实验器材</strong>：木块、弹簧测力计、砝码、毛巾、棉布、木板。</p>
+                                <p><strong>实验步骤</strong>：
+                                    <ol>
+                                        <li>将木块放在木板上，用弹簧测力计沿水平方向拉木块做匀速直线运动，记录弹簧测力计的示数。</li>
+                                        <li>在木块上放一个砝码，重复步骤1，记录弹簧测力计的示数。</li>
+                                        <li>将木块放在毛巾上，重复步骤1，记录弹簧测力计的示数。</li>
+                                        <li>分析数据，得出结论。</li>
+                                    </ol>
+                                </p>
+                                <p><strong>实验结论</strong>：滑动摩擦力的大小与压力大小和接触面的粗糙程度有关。压力越大，接触面越粗糙，滑动摩擦力越大。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 9. 拓展阅读 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">拓展阅读</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>牛顿的故事</h4>
+                                <p>艾萨克·牛顿（1643-1727）是英国著名的物理学家、数学家和天文学家。他在1687年发表的《自然哲学的数学原理》一书中，提出了万有引力定律和牛顿运动定律，奠定了经典力学的基础。牛顿第一定律又称为惯性定律，是牛顿在伽利略等人的研究基础上总结出来的。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>摩擦力的应用</h4>
+                                <p>摩擦力在生活中有广泛的应用：
+                                    <ul>
+                                        <li>走路时，鞋底与地面之间的摩擦力使人能够前进。</li>
+                                        <li>汽车刹车时，刹车片与车轮之间的摩擦力使汽车停止。</li>
+                                        <li>自行车链条与齿轮之间的摩擦力使自行车能够前进。</li>
+                                        <li>用筷子夹菜时，筷子与菜之间的摩擦力使菜能够被夹起。</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 10. 实践活动 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">实践活动</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>自制弹簧测力计</h4>
+                                <p><strong>活动目标</strong>：学会自制弹簧测力计，了解弹簧测力计的原理。</p>
+                                <p><strong>活动材料</strong>：弹簧、硬纸板、钩码、刻度尺、细线、回形针。</p>
+                                <p><strong>活动步骤</strong>：
+                                    <ol>
+                                        <li>将弹簧的一端固定在硬纸板上，另一端用细线系一个回形针作为挂钩。</li>
+                                        <li>在硬纸板上沿着弹簧的方向画一条直线，并标上刻度。</li>
+                                        <li>在挂钩上挂1个钩码，标记弹簧末端的位置，这就是1N的刻度。</li>
+                                        <li>在挂钩上挂2个钩码，标记弹簧末端的位置，这就是2N的刻度。</li>
+                                        <li>重复步骤3和4，直到弹簧的最大量程。</li>
+                                        <li>用自制的弹簧测力计测量一些物体的重力。</li>
+                                    </ol>
+                                </p>
+                                <p><strong>思考问题</strong>：自制弹簧测力计的刻度为什么是均匀的？</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>探究惯性现象</h4>
+                                <p><strong>活动目标</strong>：通过实验探究惯性现象。</p>
+                                <p><strong>活动材料</strong>：玻璃杯、硬纸板、鸡蛋、尺子。</p>
+                                <p><strong>活动步骤</strong>：
+                                    <ol>
+                                        <li>将硬纸板放在玻璃杯上，在硬纸板上放一个鸡蛋。</li>
+                                        <li>用尺子迅速敲击硬纸板，观察鸡蛋的运动情况。</li>
+                                    </ol>
+                                </p>
+                                <p><strong>实验现象</strong>：硬纸板被敲飞，鸡蛋落入玻璃杯中。</p>
+                                <p><strong>思考问题</strong>：为什么鸡蛋会落入玻璃杯中？</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 11. 知识网络 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">知识网络</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>力学知识体系</h4>
+                                <ul>
+                                    <li><strong>力的基本概念</strong>
+                                        <ul>
+                                            <li>力的定义和性质</li>
+                                            <li>力的三要素</li>
+                                            <li>力的单位和示意图</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>弹力</strong>
+                                        <ul>
+                                            <li>弹性和塑性</li>
+                                            <li>弹力的产生条件</li>
+                                            <li>弹簧测力计的使用</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>重力</strong>
+                                        <ul>
+                                            <li>重力的定义和方向</li>
+                                            <li>重力的大小：G = mg</li>
+                                            <li>重心的概念</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>摩擦力</strong>
+                                        <ul>
+                                            <li>摩擦力的分类</li>
+                                            <li>影响滑动摩擦力大小的因素</li>
+                                            <li>增大和减小摩擦力的方法</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>牛顿第一定律</strong>
+                                        <ul>
+                                            <li>牛顿第一定律的内容</li>
+                                            <li>惯性的概念</li>
+                                            <li>阻力对物体运动的影响</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>二力平衡</strong>
+                                        <ul>
+                                            <li>平衡状态的概念</li>
+                                            <li>二力平衡的条件</li>
+                                            <li>二力平衡和相互作用力的区别</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

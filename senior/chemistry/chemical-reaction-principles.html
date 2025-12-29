@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 高二化学 - 化学反应原理</title>
+    <link rel="stylesheet" href="../../style.css?v=20251224">
+    <!-- MathJax配置 -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <!-- 引入数据文件 -->
+    <script src="../../data/rootData.js"></script>
+    <script src="../../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../../js/modules/navigation.js"></script>
+    <script src="../../js/modules/englishTemplatesModule.js"></script>
+    <script src="../../js/modules/physicsModule.js"></script>
+    <script src="../../js/modules/wordRootModule.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="../../index.html" class="nav-link">返回首页</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 化学知识模块 -->
+        <section id="chemistry" class="module active">
+            <h4 style="text-align: center;">化学反应原理</h4>
+            <div class="math-container">
+                <div class="math-section">
+                    <div class="math-content">
+                        <h4>1. 化学反应与能量</h4>
+                        <p><strong>焓变</strong>：$ \Delta H = H(生成物) - H(反应物) $</p>
+                        <p><strong>热化学方程式</strong>：表示化学反应与反应热关系的化学方程式</p>
+                        <p><strong>盖斯定律</strong>：化学反应的反应热只与反应的始态和终态有关，而与反应的途径无关</p>
+                        
+                        <h4>2. 化学反应速率</h4>
+                        <p>定义：$ v = \frac{\Delta c}{\Delta t} $（Δc为浓度变化，Δt为时间变化）</p>
+                        <p>影响因素：浓度、温度、压强、催化剂等</p>
+                        
+                        <h4>3. 化学平衡</h4>
+                        <p><strong>化学平衡常数</strong>：对于反应aA + bB ⇌ cC + dD，$ K = \frac{c^c(C)\cdot c^d(D)}{c^a(A)\cdot c^b(B)} $</p>
+                        <p><strong>勒夏特列原理</strong>：如果改变影响平衡的一个条件（如浓度、压强或温度），平衡就向能够减弱这种改变的方向移动</p>
+                        
+                        <h4>4. 弱电解质的电离平衡</h4>
+                        <p><strong>电离常数</strong>：弱酸$ HA ⇌ H^+ + A^- $，$ K_a = \frac{c(H^+)\cdot c(A^-)}{c(HA)} $</p>
+                        <p>弱碱$ BOH ⇌ B^+ + OH^- $，$ K_b = \frac{c(B^+)\cdot c(OH^-)}{c(BOH)} $</p>
+                        
+                        <h5>典型例题</h5>
+                        <p><strong>例1（基础题）</strong>：已知反应2H₂(g) + O₂(g) = 2H₂O(l)的ΔH = -571.6 kJ/mol，求1 mol H₂完全燃烧生成液态水时放出的热量。</p>
+                        <p><strong>解析</strong>：根据热化学方程式，2 mol H₂完全燃烧生成液态水时放出的热量为571.6 kJ，所以1 mol H₂完全燃烧生成液态水时放出的热量为571.6 kJ / 2 = 285.8 kJ。</p>
+                        
+                        <p><strong>例2（中档题）</strong>：在2L的密闭容器中，发生反应3A(g) + B(g) ⇌ 2C(g)，若最初加入的A和B都是4 mol，10 s后，测得v(A) = 0.12 mol/(L·s)，求10 s时容器中B的物质的量。</p>
+                        <p><strong>解析</strong>：v(A) = 0.12 mol/(L·s)，则10 s内A的浓度变化Δc(A) = v(A) × Δt = 0.12 mol/(L·s) × 10 s = 1.2 mol/L。根据化学方程式，Δc(B) = Δc(A) / 3 = 0.4 mol/L，所以10 s时B的浓度c(B) = 4 mol / 2L - 0.4 mol/L = 2 mol/L - 0.4 mol/L = 1.6 mol/L，B的物质的量n(B) = c(B) × V = 1.6 mol/L × 2L = 3.2 mol。</p>
+                        
+                        <p><strong>例3（提高题）</strong>：对于反应CO(g) + H₂O(g) ⇌ CO₂(g) + H₂(g)，在800℃时，平衡常数K = 1。若在该温度下，向一个2L的密闭容器中充入1 mol CO和1 mol H₂O，求平衡时各物质的浓度。</p>
+                        <p><strong>解析</strong>：设平衡时CO的浓度变化为x mol/L，则：</p>
+                        <p>CO(g) + H₂O(g) ⇌ CO₂(g) + H₂(g)</p>
+                        <p>起始浓度（mol/L）：0.5  0.5  0  0</p>
+                        <p>变化浓度（mol/L）：x  x  x  x</p>
+                        <p>平衡浓度（mol/L）：0.5 - x  0.5 - x  x  x</p>
+                        <p>平衡常数K = [CO₂][H₂] / [CO][H₂O] = x² / (0.5 - x)² = 1，解得x = 0.25 mol/L。所以平衡时各物质的浓度为：[CO] = [H₂O] = 0.5 - 0.25 = 0.25 mol/L，[CO₂] = [H₂] = 0.25 mol/L。</p>
+                        
+                        <h5>常见错误分析</h5>
+                        <ul>
+                            <li><strong>错误1</strong>：混淆焓变的符号。<br><strong>正确做法</strong>：焓变ΔH为负，表示放热反应；ΔH为正，表示吸热反应。</li>
+                            <li><strong>错误2</strong>：在计算化学反应速率时，忽略了体积的影响。<br><strong>正确做法</strong>：化学反应速率的定义是单位时间内浓度的变化，而不是物质的量的变化，所以需要除以体积。</li>
+                            <li><strong>错误3</strong>：在使用化学平衡常数时，代入了固体或纯液体的浓度。<br><strong>正确做法</strong>：化学平衡常数表达式中，只包括气态物质和溶液的浓度，固体和纯液体的浓度视为1，不写入表达式中。</li>
+                        </ul>
+                        
+                        <h5>解题技巧总结</h5>
+                        <ul>
+                            <li>对于热化学方程式问题，要注意焓变的符号、单位和化学计量数的关系。</li>
+                            <li>计算化学反应速率时，要注意浓度变化和时间的关系，以及不同物质的速率之比等于化学计量数之比。</li>
+                            <li>使用化学平衡常数时，要注意表达式的书写规则和温度对平衡常数的影响。</li>
+                            <li>对于化学平衡的移动问题，要应用勒夏特列原理，分析条件改变对平衡的影响。</li>
+                            <li>对于弱电解质的电离平衡问题，要理解电离常数的意义和影响因素，掌握pH的计算方法。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

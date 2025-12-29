@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 高二物理 - 交变电流</title>
+    <link rel="stylesheet" href="../../style.css?v=20251224">
+    <!-- MathJax配置 -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <!-- 引入数据文件 -->
+    <script src="../../data/rootData.js"></script>
+    <script src="../../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../../js/modules/navigation.js"></script>
+    <script src="../../js/modules/englishTemplatesModule.js"></script>
+    <script src="../../js/modules/physicsModule.js"></script>
+    <script src="../../js/modules/wordRootModule.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="../../index.html" class="nav-link">返回首页</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 物理知识模块 -->
+        <section id="physics" class="module active">
+            <h4 style="text-align: center;">交流电流</h4>
+            <div class="math-container">
+                <div class="math-section">
+                    <div class="math-content">
+                        <h4>1. 正弦式交变电流的产生</h4>
+                        <p>感应电动势的瞬时值：$ e = E_m sin \omega t $，其中$ E_m = NBS\omega $</p>
+                        
+                        <h4>2. 有效值</h4>
+                        <p>正弦式交变电流的有效值：$ E = \frac{E_m}{\sqrt{2}} $，$ U = \frac{U_m}{\sqrt{2}} $，$ I = \frac{I_m}{\sqrt{2}} $</p>
+                        
+                        <h4>3. 理想变压器</h4>
+                        <p>电压比：$ \frac{U_1}{U_2} = \frac{n_1}{n_2} $</p>
+                        <p>电流比：$ \frac{I_1}{I_2} = \frac{n_2}{n_1} $（只有一个副线圈时）</p>
+                        <p>功率关系：$ P_入 = P_出 $</p>
+                        
+                        <h5>典型例题</h5>
+                        <p><strong>例1（基础题）</strong>：某正弦式交变电流的最大值为311 V，求其有效值。</p>
+                        <p><strong>解析</strong>：正弦式交变电流的有效值$ U = \frac{U_m}{\sqrt{2}} = \frac{311 V}{1.414} ≈ 220 V $。</p>
+                        
+                        <p><strong>例2（中档题）</strong>：一个理想变压器，原线圈匝数为1000，副线圈匝数为200，原线圈接在220 V的交流电源上，副线圈接一个电阻为11 Ω的负载，求副线圈的电压和电流，以及原线圈的电流。</p>
+                        <p><strong>解析</strong>：根据电压比公式，副线圈电压$ U_2 = \frac{n_2}{n_1}U_1 = \frac{200}{1000}×220 V = 44 V $；副线圈电流$ I_2 = \frac{U_2}{R} = \frac{44 V}{11 Ω} = 4 A $；根据电流比公式，原线圈电流$ I_1 = \frac{n_2}{n_1}I_2 = \frac{200}{1000}×4 A = 0.8 A $。</p>
+                        
+                        <p><strong>例3（提高题）</strong>：一个正弦式交变电流的表达式为$ e = 311 sin 314t $ V，求其频率、周期和有效值。</p>
+                        <p><strong>解析</strong>：由表达式可知，电动势的最大值$ E_m = 311 V $，角频率$ \omega = 314 rad/s $；频率$ f = \frac{\omega}{2\pi} = \frac{314 rad/s}{2×3.14} = 50 Hz $；周期$ T = \frac{1}{f} = \frac{1}{50 Hz} = 0.02 s $；有效值$ E = \frac{E_m}{\sqrt{2}} = \frac{311 V}{1.414} ≈ 220 V $。</p>
+                        
+                        <h5>常见错误分析</h5>
+                        <ul>
+                            <li><strong>错误1</strong>：混淆交变电流的最大值和有效值。<br><strong>正确做法</strong>：正弦式交变电流的有效值是最大值的$ \frac{1}{\sqrt{2}} $倍，即$ E = \frac{E_m}{\sqrt{2}} $，$ U = \frac{U_m}{\sqrt{2}} $，$ I = \frac{I_m}{\sqrt{2}} $。</li>
+                            <li><strong>错误2</strong>：在使用变压器的电流比公式时，忽略了只有一个副线圈的条件。<br><strong>正确做法</strong>：电流比公式$ \frac{I_1}{I_2} = \frac{n_2}{n_1} $只适用于只有一个副线圈的情况；如果有多个副线圈，应该使用功率守恒$ P_入 = P_出 $来求解。</li>
+                            <li><strong>错误3</strong>：误将理想变压器的电压比公式应用于直流电路。<br><strong>正确做法</strong>：变压器只能工作在交流电路中，直流电流通过变压器时，不会产生感应电动势。</li>
+                        </ul>
+                        
+                        <h5>解题技巧总结</h5>
+                        <ul>
+                            <li>对于正弦式交变电流，要掌握其瞬时值、最大值、有效值、频率和周期之间的关系。</li>
+                            <li>使用理想变压器的公式时，要注意电压比和电流比的适用条件，以及功率守恒的应用。</li>
+                            <li>在计算交变电流的热效应时，一定要使用有效值，而不是最大值。</li>
+                            <li>对于交变电流的图像问题，要能从图像中读取最大值、周期等信息，并能写出瞬时值表达式。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

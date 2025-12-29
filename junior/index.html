@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 初中知识</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- MathJax配置 -->
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['(', ')'], ['\\(', '\\)'], ['$', '$']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['noerrors']}
+            },
+            options: {
+                renderActions: {
+                    addMenu: [0, '', '']
+                }
+            }
+        };
+    </script>
+    <!-- 引入数据文件 -->
+    <script src="../data/rootData.js"></script>
+    <script src="../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../js/modules/navigation.js"></script>
+    <script src="../js/modules/englishTemplatesModule.js"></script>
+    <script src="../js/modules/physicsModule.js"></script>
+    <script src="../js/modules/wordRootModule.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <a href="../index.html" class="nav-btn">返回首页</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 初中知识模块 -->
+        <section id="junior" class="module active">
+            <h2>初中知识</h2>
+            <div class="subject-selection">
+                <h3>选择科目</h3>
+                <div class="subject-buttons">
+                    <a href="word-root.html" class="subject-btn">词根学习</a>
+                    <a href="english-templates.html" class="subject-btn">英语作文</a>
+                    <a href="junior-summary.html" class="subject-btn">知识总结</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 高二物理 - 电磁感应</title>
+    <link rel="stylesheet" href="../../style.css?v=20251224">
+    <!-- MathJax配置 -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <!-- 引入数据文件 -->
+    <script src="../../data/rootData.js"></script>
+    <script src="../../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../../js/modules/navigation.js"></script>
+    <script src="../../js/modules/englishTemplatesModule.js"></script>
+    <script src="../../js/modules/physicsModule.js"></script>
+    <script src="../../js/modules/wordRootModule.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="../../index.html" class="nav-link">返回首页</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 物理知识模块 -->
+        <section id="physics" class="module active">
+            <h4 style="text-align: center;">电磁感应</h4>
+            <div class="math-container">
+                <div class="math-section">
+                    <div class="math-content">
+                        <h4>1. 法拉第电磁感应定律</h4>
+                        <p>$ E = n\frac{\Delta \Phi}{\Delta t} $（n为线圈匝数，$ \frac{\Delta \Phi}{\Delta t} $为磁通量变化率）</p>
+                        
+                        <h4>2. 导体切割磁感线产生的感应电动势</h4>
+                        <p>$ E = BLv $（B、L、v两两垂直）</p>
+                        <p>导体棒绕一端转动：$ E = \frac{1}{2}BL^2\omega $（ω为角速度）</p>
+                        
+                        <h4>3. 楞次定律</h4>
+                        <p>感应电流的磁场总是阻碍引起感应电流的磁通量的变化</p>
+                        
+                        <h4>4. 自感现象</h4>
+                        <p>自感电动势：$ E_L = L\frac{\Delta I}{\Delta t} $（L为自感系数）</p>
+                        
+                        <h5>典型例题</h5>
+                        <p><strong>例1（基础题）</strong>：一个匝数为100的线圈，穿过它的磁通量在0.5秒内从0.02 Wb增加到0.1 Wb，求线圈中产生的感应电动势的大小。</p>
+                        <p><strong>解析</strong>：根据法拉第电磁感应定律，感应电动势$ E = n\frac{\Delta \Phi}{\Delta t} = 100 × \frac{0.1 Wb - 0.02 Wb}{0.5 s} = 100 × 0.16 V = 16 V $。</p>
+                        
+                        <p><strong>例2（中档题）</strong>：一根长度为0.5 m的导体棒，在磁感应强度为0.4 T的匀强磁场中，以5 m/s的速度垂直切割磁感线，求导体棒中产生的感应电动势的大小。</p>
+                        <p><strong>解析</strong>：根据导体切割磁感线产生的感应电动势公式，$ E = BLv = 0.4 T × 0.5 m × 5 m/s = 1 V $。</p>
+                        
+                        <p><strong>例3（提高题）</strong>：如图所示，一个矩形线圈abcd，匝数为n，长为L，宽为d，以角速度ω绕垂直于磁场方向的轴OO'匀速转动，匀强磁场的磁感应强度为B，求线圈中产生的感应电动势的最大值和瞬时值。</p>
+                        <p><strong>解析</strong>：当线圈平面与磁场方向平行时，感应电动势最大，$ E_m = nBLd\omega $；瞬时值$ e = E_m sin\omega t = nBLd\omega sin\omega t $。</p>
+                        
+                        <h5>常见错误分析</h5>
+                        <ul>
+                            <li><strong>错误1</strong>：混淆磁通量、磁通量变化量和磁通量变化率。<br><strong>正确做法</strong>：磁通量$ \Phi = BS $，磁通量变化量$ \Delta \Phi = \Phi_2 - \Phi_1 $，磁通量变化率$ \frac{\Delta \Phi}{\Delta t} $。法拉第电磁感应定律中使用的是磁通量变化率。</li>
+                            <li><strong>错误2</strong>：在使用楞次定律时，误将“阻碍”理解为“阻止”。<br><strong>正确做法</strong>：感应电流的磁场只是阻碍磁通量的变化，而不是阻止，磁通量仍然会变化。</li>
+                            <li><strong>错误3</strong>：在计算导体切割磁感线产生的感应电动势时，忽略了B、L、v的夹角。<br><strong>正确做法</strong>：当B、L、v不两两垂直时，感应电动势$ E = BLv sin\theta $，其中θ是B与v的夹角。</li>
+                        </ul>
+                        
+                        <h5>解题技巧总结</h5>
+                        <ul>
+                            <li>对于电磁感应问题，首先要判断是哪种类型的感应电动势（磁通量变化或导体切割磁感线），然后选择合适的公式求解。</li>
+                            <li>使用楞次定律时，要明确“阻碍”的含义：阻碍磁通量的变化、阻碍导体的相对运动、阻碍原电流的变化。</li>
+                            <li>对于自感现象，要理解自感电动势的作用是阻碍电流的变化，自感系数L越大，阻碍作用越强。</li>
+                            <li>对于电磁感应中的图像问题，要结合法拉第电磁感应定律和楞次定律分析感应电动势或感应电流的变化规律。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

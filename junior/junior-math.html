@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 初二数学</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- MathJax配置 -->
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['(', ')'], ['\\(', '\\)'], ['$', '$']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['noerrors']}
+            },
+            options: {
+                renderActions: {
+                    addMenu: [0, '', '']
+                }
+            }
+        };
+    </script>
+    <!-- 引入数据文件 -->
+    <script src="../data/rootData.js"></script>
+    <script src="../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../js/modules/navigation.js"></script>
+    <script src="../js/modules/englishTemplatesModule.js"></script>
+    <script src="../js/modules/physicsModule.js"></script>
+    <script src="../js/modules/wordRootModule.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <a href="../index.html" class="nav-btn">返回首页</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 初二数学模块 -->
+        <section id="junior-math" class="module active">
+            <h4 style="text-align: center;">初二数学重要知识点与公式</h4>
+            <!-- 章节导航菜单 -->
+            <nav class="chapter-nav">
+                <ul>
+                    <li><a href="math/triangle.html">一、三角形</a></li>
+                    <li><a href="math/congruent-triangle.html">二、全等三角形</a></li>
+                    <li><a href="math/axisymmetric.html">三、轴对称</a></li>
+                    <li><a href="math/quadratic-radical.html">四、二次根式</a></li>
+                    <li><a href="math/pythagorean-theorem.html">五、勾股定理</a></li>
+                    <li><a href="math/function.html">六、函数</a></li>
+                    <li><a href="math/fraction.html">七、分式与分式方程</a></li>
+                    <li><a href="math/parallelogram.html">八、平行四边形</a></li>
+                    <li><a href="math/data-analysis.html">九、数据的分析</a></li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+</body>
+</html>

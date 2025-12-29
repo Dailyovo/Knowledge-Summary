@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 高二数学</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- MathJax配置 -->
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['(', ')'], ['\\(', '\\)'], ['$', '$']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['noerrors']}
+            },
+            options: {
+                renderActions: {
+                    addMenu: [0, '', '']
+                }
+            }
+        };
+    </script>
+    <!-- 引入数据文件 -->
+    <script src="../data/rootData.js"></script>
+    <script src="../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../js/modules/navigation.js"></script>
+    <script src="../js/modules/englishTemplatesModule.js"></script>
+    <script src="../js/modules/physicsModule.js"></script>
+    <script src="../js/modules/wordRootModule.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <a href="../index.html" class="nav-btn">返回首页</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 数学知识模块 -->
+        <section id="math" class="module active">
+            <h4 style="text-align: center;">高二数学重要知识点与公式</h4>
+            <!-- 章节导航菜单 -->
+            <nav class="chapter-nav">
+                <ul>
+                    <li><a href="math/conic-sections.html">一、圆锥曲线与方程</a></li>
+                    <li><a href="math/derivatives.html">二、导数及其应用</a></li>
+                    <li><a href="math/space-vectors.html">三、空间向量与立体几何</a></li>
+                    <li><a href="math/counting-principles.html">四、计数原理</a></li>
+                    <li><a href="math/probability-statistics.html">五、概率统计</a></li>
+                    <li><a href="math/complex-numbers.html">六、复数</a></li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+</body>
+</html>

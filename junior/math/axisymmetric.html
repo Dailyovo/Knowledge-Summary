@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 轴对称</title>
+    <link rel="stylesheet" href="../../style.css?v=20251224">
+    <!-- MathJax配置 -->
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['(', ')'], ['\\(', '\\)'], ['$', '$']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['noerrors']}
+            },
+            options: {
+                renderActions: {
+                    addMenu: [0, '', '']
+                }
+            }
+        };
+    </script>
+    <!-- 引入数据文件 -->
+    <script src="../../data/rootData.js"></script>
+    <script src="../../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../../js/modules/navigation.js"></script>
+    <script src="../../js/modules/englishTemplatesModule.js"></script>
+    <script src="../../js/modules/physicsModule.js"></script>
+    <script src="../../js/modules/wordRootModule.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="../../index.html" class="nav-link">返回首页</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 轴对称模块 -->
+        <section id="axisymmetric" class="module active">
+            <h4 style="text-align: center;">轴对称</h4>
+            <div class="math-container">
+                <!-- 1. 轴对称的概念和性质 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">轴对称的概念和性质</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>轴对称图形</h4>
+                                <p><strong>轴对称图形</strong>：如果一个图形沿一条直线折叠，直线两旁的部分能够互相重合，这个图形就叫做轴对称图形，这条直线就是它的对称轴。</p>
+                                <p><strong>常见的轴对称图形</strong>：线段、角、等腰三角形、等边三角形、矩形、菱形、正方形、圆等。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>两个图形成轴对称</h4>
+                                <p><strong>两个图形成轴对称</strong>：把一个图形沿一条直线折叠，如果它能够与另一个图形重合，那么就说这两个图形关于这条直线（成轴）对称，这条直线叫做对称轴，折叠后重合的点是对应点，叫做对称点。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>轴对称的性质</h4>
+                                <p><strong>轴对称的性质</strong>：
+                                    <ul>
+                                        <li>如果两个图形关于某条直线对称，那么对称轴是任何一对对应点所连线段的垂直平分线。</li>
+                                        <li>轴对称图形的对称轴，是任何一对对应点所连线段的垂直平分线。</li>
+                                        <li>成轴对称的两个图形全等。</li>
+                                        <li>轴对称图形被对称轴分成的两部分全等。</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>垂直平分线的性质</h4>
+                                <p><strong>垂直平分线的性质</strong>：线段垂直平分线上的点与这条线段两个端点的距离相等。</p>
+                                <p><strong>垂直平分线的判定</strong>：与一条线段两个端点距离相等的点，在这条线段的垂直平分线上。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2. 等腰三角形 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">等腰三角形</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>等腰三角形的性质</h4>
+                                <p><strong>等腰三角形的性质</strong>：
+                                    <ul>
+                                        <li>等腰三角形的两个底角相等（简写成“等边对等角”）。</li>
+                                        <li>等腰三角形的顶角平分线、底边上的中线、底边上的高相互重合（简写成“三线合一”）。</li>
+                                        <li>等腰三角形是轴对称图形，其对称轴是底边的垂直平分线。</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>等腰三角形的判定</h4>
+                                <p><strong>等腰三角形的判定</strong>：如果一个三角形有两个角相等，那么这两个角所对的边也相等（简写成“等角对等边”）。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>等边三角形</h4>
+                                <p><strong>等边三角形的性质</strong>：
+                                    <ul>
+                                        <li>等边三角形的三个内角都相等，并且每一个内角都等于60°。</li>
+                                        <li>等边三角形是轴对称图形，有三条对称轴。</li>
+                                        <li>等边三角形的每条边上的中线、高和该边所对内角的平分线互相重合。</li>
+                                    </ul>
+                                </p>
+                                <p><strong>等边三角形的判定</strong>：
+                                    <ul>
+                                        <li>三个角都相等的三角形是等边三角形。</li>
+                                        <li>有一个角是60°的等腰三角形是等边三角形。</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>含30°角的直角三角形</h4>
+                                <p><strong>含30°角的直角三角形的性质</strong>：在直角三角形中，如果一个锐角等于30°，那么它所对的直角边等于斜边的一半。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3. 轴对称变换 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">轴对称变换</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>轴对称变换的概念</h4>
+                                <p><strong>轴对称变换</strong>：由一个平面图形得到它的轴对称图形叫做轴对称变换。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>利用轴对称变换设计图案</h4>
+                                <p><strong>轴对称变换的应用</strong>：
+                                    <ul>
+                                        <li>利用轴对称变换可以设计美丽的图案，如剪纸、窗花等。</li>
+                                        <li>在实际生活中，轴对称变换广泛应用于建筑设计、艺术创作、工业设计等领域。</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>3.3 最短路径问题</h4>
+                                <p><strong>最短路径问题</strong>：利用轴对称变换可以解决最短路径问题，如“将军饮马”问题。</p>
+                                <p><strong>示例</strong>：将军从A地出发到河边饮马，然后到B地，怎样走路径最短？</p>
+                                <p><strong>解法</strong>：作点A关于河岸的对称点A'，连接A'B交河岸于点P，则AP+PB就是最短路径。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 4. 典型例题 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">四、典型例题</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="example">
+                                <h5>例题1：基础题</h5>
+                                <p>如图，在△ABC中，AB=AC，AD是BC边上的中线，∠B=50°，求∠BAD的度数。</p>
+                                <p><strong>答案</strong>：因为AB=AC，所以△ABC是等腰三角形，AD是BC边上的中线，根据“三线合一”性质，AD也是∠BAC的平分线和BC边上的高。所以∠ADB=90°，∠BAD=∠CAD。因为∠B=50°，所以∠BAC=180°-2×50°=80°，因此∠BAD=40°。</p>
+                            </div>
+                            
+                            <div class="example">
+                                <h5>例题2：中等题</h5>
+                                <p>如图，在△ABC中，∠ACB=90°，CD是AB边上的高，∠A=30°，求证：BD=AB/4。</p>
+                                <p><strong>答案</strong>：证明：在Rt△ABC中，∠A=30°，所以BC=AB/2，∠B=60°。在Rt△BCD中，∠BCD=30°，所以BD=BC/2，因此BD=AB/4。</p>
+                            </div>
+                            
+                            <div class="example">
+                                <h5>例题3：提高题</h5>
+                                <p>如图，在四边形ABCD中，∠BAD=120°，∠B=∠D=90°，AB=1，AD=2，求BC+CD的长。</p>
+                                <p><strong>答案</strong>：延长AB、DC交于点E。因为∠BAD=120°，∠B=∠D=90°，所以∠E=30°。在Rt△ADE中，AD=2，所以AE=2AD=4，DE=AD×tan60°=2√3。在Rt△BCE中，BE=AE-AB=3，所以BC=BE×tan30°=√3，CE=2BC=2√3。因此CD=DE-CE=2√3-2√3=0，BC+CD=√3+0=√3。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5. 拓展阅读 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">五、拓展阅读</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="expansion-reading">
+                                <h4>5.1 轴对称在建筑设计中的应用</h4>
+                                <p>轴对称在建筑设计中有着广泛的应用，如中国古代的宫殿、庙宇、园林等建筑，大多采用轴对称的设计，体现了对称美和平衡美。现代建筑中，轴对称设计也被广泛应用，如北京奥运会主体育场“鸟巢”虽然整体是不对称的，但局部仍采用了轴对称设计，既体现了现代感，又保持了平衡感。</p>
+                                
+                                <h4>5.2 轴对称与艺术创作</h4>
+                                <p>轴对称在艺术创作中也有着重要的应用，如剪纸、窗花、刺绣等传统艺术形式，大多采用轴对称的设计，具有很强的装饰性和艺术性。在现代艺术中，轴对称也是一种重要的设计元素，被广泛应用于绘画、雕塑、平面设计等领域。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 6. 实践活动 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">六、实践活动</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="practical-activity">
+                                <h4>6.1 制作轴对称图形</h4>
+                                <p><strong>活动目标</strong>：通过制作轴对称图形，加深对轴对称概念和性质的理解</p>
+                                <p><strong>活动材料</strong>：纸张、剪刀、尺子、铅笔</p>
+                                <p><strong>活动步骤</strong>：
+                                    <ol>
+                                        <li>将纸张对折，在对折后的一侧画出图形的一半</li>
+                                        <li>用剪刀将图形剪下来</li>
+                                        <li>展开纸张，得到一个轴对称图形</li>
+                                        <li>观察图形的对称轴，验证轴对称的性质</li>
+                                    </ol>
+                                </p>
+                                
+                                <h4>6.2 设计轴对称图案</h4>
+                                <p><strong>活动目标</strong>：利用轴对称变换设计美丽的图案</p>
+                                <p><strong>活动材料</strong>：纸张、彩笔、尺子、铅笔</p>
+                                <p><strong>活动步骤</strong>：
+                                    <ol>
+                                        <li>在纸张上画一条直线作为对称轴</li>
+                                        <li>在对称轴的一侧画出图案的一部分</li>
+                                        <li>根据轴对称的性质，画出图案的另一部分</li>
+                                        <li>用彩笔给图案上色，得到一个美丽的轴对称图案</li>
+                                    </ol>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 7. 知识网络 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">七、知识网络</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="knowledge-network">
+                                <h4>7.1 轴对称知识体系</h4>
+                                <ul>
+                                    <li><strong>轴对称的概念</strong>
+                                        <ul>
+                                            <li>轴对称图形</li>
+                                            <li>两个图形成轴对称</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>轴对称的性质</strong>
+                                        <ul>
+                                            <li>对称轴是对应点所连线段的垂直平分线</li>
+                                            <li>成轴对称的两个图形全等</li>
+                                            <li>垂直平分线的性质和判定</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>等腰三角形</strong>
+                                        <ul>
+                                            <li>等腰三角形的性质（等边对等角、三线合一）</li>
+                                            <li>等腰三角形的判定（等角对等边）</li>
+                                            <li>等边三角形的性质和判定</li>
+                                            <li>含30°角的直角三角形的性质</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>轴对称变换</strong>
+                                        <ul>
+                                            <li>轴对称变换的概念</li>
+                                            <li>利用轴对称变换设计图案</li>
+                                            <li>最短路径问题</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 全等三角形</title>
+    <link rel="stylesheet" href="../../style.css?v=20251224">
+    <!-- MathJax配置 -->
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['(', ')'], ['\\(', '\\)'], ['$', '$']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['noerrors']}
+            },
+            options: {
+                renderActions: {
+                    addMenu: [0, '', '']
+                }
+            }
+        };
+    </script>
+    <!-- 引入数据文件 -->
+    <script src="../../data/rootData.js"></script>
+    <script src="../../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../../js/modules/navigation.js"></script>
+    <script src="../../js/modules/englishTemplatesModule.js"></script>
+    <script src="../../js/modules/physicsModule.js"></script>
+    <script src="../../js/modules/wordRootModule.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="../../index.html" class="nav-link">返回首页</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 初二数学模块 -->
+        <section id="junior-math" class="module active">
+            <h4 style="text-align: center;">全等三角形</h4>
+            <div class="math-container">
+                <div class="math-section">
+                    <div class="math-content">
+                        <h4>1. 全等三角形的概念和性质</h4>
+                        <div class="concept-detail">
+                            <h5>全等形的定义</h5>
+                            <p><strong>全等形</strong>：能够完全重合的两个图形叫做全等形。</p>
+                            <p><strong>全等三角形</strong>：能够完全重合的两个三角形叫做全等三角形。</p>
+                            <p><strong>对应元素</strong>：全等三角形中，互相重合的顶点叫做对应顶点，互相重合的边叫做对应边，互相重合的角叫做对应角。</p>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h5>全等三角形的性质</h5>
+                            <p>全等三角形的对应边相等，对应角相等。</p>
+                            <p>几何表达式：若△ABC≌△DEF，则AB=DE，BC=EF，AC=DF，∠A=∠D，∠B=∠E，∠C=∠F。</p>
+                        </div>
+                        
+                        <h4>2. 全等三角形的判定</h4>
+                        <div class="concept-detail">
+                            <h5>SSS（边边边）判定</h5>
+                            <p><strong>内容</strong>：三边分别相等的两个三角形全等（简写成“边边边”或“SSS”）。</p>
+                            <p><strong>几何表达式</strong>：在△ABC和△DEF中，若AB=DE，BC=EF，AC=DF，则△ABC≌△DEF（SSS）。</p>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h5>SAS（边角边）判定</h5>
+                            <p><strong>内容</strong>：两边和它们的夹角分别相等的两个三角形全等（简写成“边角边”或“SAS”）。</p>
+                            <p><strong>几何表达式</strong>：在△ABC和△DEF中，若AB=DE，∠A=∠D，AC=DF，则△ABC≌△DEF（SAS）。</p>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h5>ASA（角边角）判定</h5>
+                            <p><strong>内容</strong>：两角和它们的夹边分别相等的两个三角形全等（简写成“角边角”或“ASA”）。</p>
+                            <p><strong>几何表达式</strong>：在△ABC和△DEF中，若∠B=∠E，BC=EF，∠C=∠F，则△ABC≌△DEF（ASA）。</p>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h5>AAS（角角边）判定</h5>
+                            <p><strong>内容</strong>：两角和其中一角的对边分别相等的两个三角形全等（简写成“角角边”或“AAS”）。</p>
+                            <p><strong>几何表达式</strong>：在△ABC和△DEF中，若∠B=∠E，∠C=∠F，AC=DF，则△ABC≌△DEF（AAS）。</p>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h5>HL（斜边、直角边）判定</h5>
+                            <p><strong>内容</strong>：斜边和一条直角边分别相等的两个直角三角形全等（简写成“斜边、直角边”或“HL”）。</p>
+                            <p><strong>几何表达式</strong>：在Rt△ABC和Rt△DEF中，若∠C=∠F=90°，AC=DF，AB=DE，则Rt△ABC≌Rt△DEF（HL）。</p>
+                        </div>
+                        
+                        <h4>3. 全等三角形的应用</h4>
+                        <div class="concept-detail">
+                            <h5>证明线段相等</h5>
+                            <p>通过证明两个三角形全等，得到对应边相等。</p>
+                            <p><strong>示例</strong>：已知AB=CD，AC=BD，求证：∠A=∠D。</p>
+                            <p><strong>证明</strong>：连接BC，在△ABC和△DCB中，AB=CD，AC=BD，BC=CB，所以△ABC≌△DCB（SSS），因此∠A=∠D。</p>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h5>证明角相等</h5>
+                            <p>通过证明两个三角形全等，得到对应角相等。</p>
+                            <p><strong>示例</strong>：已知AD=BC，∠DAB=∠CBA，求证：∠ADB=∠BCA。</p>
+                            <p><strong>证明</strong>：在△DAB和△CBA中，AD=BC，∠DAB=∠CBA，AB=BA，所以△DAB≌△CBA（SAS），因此∠ADB=∠BCA。</p>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h5>测量距离</h5>
+                            <p>利用全等三角形的性质，可以间接测量难以直接测量的距离，如河宽、山高等。</p>
+                            <p><strong>示例</strong>：测量河宽AB，在河岸取一点C，连接AC并延长到D，使CD=AC，连接BC并延长到E，使CE=BC，测量DE的长度即为AB的长度。</p>
+                        </div>
+                        
+                        <h4>4. 典型例题</h4>
+                        <div class="example">
+                            <h5>基础题</h5>
+                            <p>如图，已知AB=AD，AC=AE，∠1=∠2，求证：BC=DE。</p>
+                            <p><strong>答案</strong>：证明：因为∠1=∠2，所以∠1+∠DAC=∠2+∠DAC，即∠BAC=∠DAE。在△ABC和△ADE中，AB=AD，∠BAC=∠DAE，AC=AE，所以△ABC≌△ADE（SAS），因此BC=DE。</p>
+                        </div>
+                        
+                        <div class="example">
+                            <h5>中等题</h5>
+                            <p>如图，在△ABC中，AD⊥BC于D，BE⊥AC于E，AD和BE相交于F，BF=AC，求证：AD=BD。</p>
+                            <p><strong>答案</strong>：证明：因为AD⊥BC，BE⊥AC，所以∠ADB=∠ADC=∠BEC=90°。所以∠FBD+∠BFD=90°，∠AFE+∠FAE=90°，又因为∠BFD=∠AFE，所以∠FBD=∠FAE。在△BDF和△ADC中，∠FBD=∠CAD，∠BDF=∠ADC，BF=AC，所以△BDF≌△ADC（AAS），因此AD=BD。</p>
+                        </div>
+                        
+                        <div class="example">
+                            <h5>提高题</h5>
+                            <p>如图，在△ABC中，AB=AC，∠BAC=90°，D是AC的中点，AE⊥BD于E，延长AE交BC于F，求证：∠ADB=∠CDF。</p>
+                            <p><strong>答案</strong>：证明：过C作CG⊥AC交AF的延长线于G。因为∠BAC=90°，AE⊥BD，所以∠ABD+∠BAE=90°，∠BAE+∠CAG=90°，所以∠ABD=∠CAG。在△ABD和△CAG中，∠ABD=∠CAG，AB=CA，∠BAD=∠ACG=90°，所以△ABD≌△CAG（ASA），因此∠ADB=∠G，AD=CG。因为D是AC的中点，所以AD=CD，所以CD=CG。因为AB=AC，∠BAC=90°，所以∠ACB=45°，又因为CG⊥AC，所以∠GCF=45°，所以∠DCF=∠GCF。在△CDF和△CGF中，CD=CG，∠DCF=∠GCF，CF=CF，所以△CDF≌△CGF（SAS），因此∠CDF=∠G，所以∠ADB=∠CDF。</p>
+                        </div>
+                        
+                        <h4>5. 拓展阅读</h4>
+                        <div class="expanded-reading">
+                            <h5>全等三角形的历史</h5>
+                            <p>全等三角形的概念和性质在古代就已经被人们所认识和应用。古埃及人在建造金字塔时，就利用了全等三角形的原理来保证石块的精确拼接。古希腊数学家欧几里得在《几何原本》中系统地总结了全等三角形的判定方法和性质，为后来的几何学发展奠定了基础。</p>
+                            
+                            <h5>全等三角形在生活中的应用</h5>
+                            <p>全等三角形的性质在生活中有广泛的应用，如：
+                                <ul>
+                                    <li>建筑工程中，利用全等三角形的原理来保证结构的稳定性和对称性</li>
+                                    <li>测量学中，利用全等三角形的性质间接测量距离和高度</li>
+                                    <li>机械制造中，利用全等三角形的原理设计和制造精密零件</li>
+                                    <li>艺术设计中，利用全等三角形的对称性创造美观的图案和造型</li>
+                                </ul>
+                            </p>
+                        </div>
+                        
+                        <h4>6. 实践活动</h4>
+                        <div class="practice-activity">
+                            <h5>制作全等三角形</h5>
+                            <p><strong>活动目标</strong>：通过制作全等三角形，加深对全等三角形概念和性质的理解</p>
+                            <p><strong>活动材料</strong>：硬纸板、剪刀、尺子、铅笔</p>
+                            <p><strong>活动步骤</strong>：
+                                <ol>
+                                    <li>用尺子在硬纸板上画一个三角形，记录三边的长度和三个角的度数</li>
+                                    <li>根据记录的边长，用尺子和铅笔在另一张硬纸板上画一个全等的三角形</li>
+                                    <li>用剪刀将两个三角形剪下来</li>
+                                    <li>将两个三角形重合，验证它们是否全等</li>
+                                    <li>测量两个三角形的对应角，验证对应角是否相等</li>
+                                </ol>
+                            </p>
+                            
+                            <h5>测量旗杆的高度</h5>
+                            <p><strong>活动目标</strong>：利用全等三角形的性质测量旗杆的高度</p>
+                            <p><strong>活动材料</strong>：镜子、尺子</p>
+                            <p><strong>活动步骤</strong>：
+                                <ol>
+                                    <li>将镜子放在地面上，调整位置，使你能从镜子中看到旗杆的顶端</li>
+                                    <li>测量你到镜子的距离，以及镜子到旗杆底部的距离</li>
+                                    <li>测量你的眼睛到地面的高度</li>
+                                    <li>利用相似三角形的性质计算旗杆的高度（入射角等于反射角，形成两个相似三角形）</li>
+                                </ol>
+                            </p>
+                        </div>
+                        
+                        <h4>7. 知识网络</h4>
+                        <div class="knowledge-network">
+                            <h5>全等三角形知识体系</h5>
+                            <ul>
+                                <li><strong>全等三角形的概念</strong>
+                                    <ul>
+                                        <li>全等形的定义</li>
+                                        <li>全等三角形的定义</li>
+                                        <li>对应元素（对应顶点、对应边、对应角）</li>
+                                    </ul>
+                                </li>
+                                <li><strong>全等三角形的性质</strong>
+                                    <ul>
+                                        <li>对应边相等</li>
+                                        <li>对应角相等</li>
+                                    </ul>
+                                </li>
+                                <li><strong>全等三角形的判定</strong>
+                                    <ul>
+                                        <li>SSS（边边边）</li>
+                                        <li>SAS（边角边）</li>
+                                        <li>ASA（角边角）</li>
+                                        <li>AAS（角角边）</li>
+                                        <li>HL（斜边、直角边，适用于直角三角形）</li>
+                                    </ul>
+                                </li>
+                                <li><strong>全等三角形的应用</strong>
+                                    <ul>
+                                        <li>证明线段相等</li>
+                                        <li>证明角相等</li>
+                                        <li>测量距离和高度</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 高二数学 - 概率统计</title>
+    <link rel="stylesheet" href="../../style.css?v=20251224">
+    <!-- MathJax配置 -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <!-- 引入数据文件 -->
+    <script src="../../data/rootData.js"></script>
+    <script src="../../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../../js/modules/navigation.js"></script>
+    <script src="../../js/modules/englishTemplatesModule.js"></script>
+    <script src="../../js/modules/physicsModule.js"></script>
+    <script src="../../js/modules/wordRootModule.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="../../index.html" class="nav-link">返回首页</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 数学知识模块 -->
+        <section id="math" class="module active">
+            <h4 style="text-align: center;">五、概率统计</h4>
+            <div class="math-container">
+                <div class="math-section" id="probability-statistics">
+                    
+                    <div class="math-content">
+                        <p><strong>概念阐释</strong>：概率统计是研究随机现象数量规律的数学分支，包括概率和统计两部分。概率主要研究随机事件发生的可能性大小，统计则主要研究如何收集、整理和分析数据。</p>
+                        
+                        <h4>1. 随机事件及其概率</h4>
+                        <p><strong>随机事件</strong>：在一定条件下，可能发生也可能不发生的事件叫做随机事件，通常用大写字母A、B、C等表示。</p>
+                        
+                        <p><strong>必然事件</strong>：在一定条件下，必然会发生的事件叫做必然事件，记作Ω。</p>
+                        
+                        <p><strong>不可能事件</strong>：在一定条件下，必然不会发生的事件叫做不可能事件，记作∅。</p>
+                        
+                        <p><strong>概率的定义</strong>：对于给定的随机事件A，随着试验次数的增加，事件A发生的频率稳定在某个常数附近，这个常数叫做事件A的概率，记作P(A)。</p>
+                        
+                        <p><strong>概率的基本性质</strong>：</p>
+                        <ul>
+                            <li>0 ≤ P(A) ≤ 1</li>
+                            <li>P(Ω) = 1，P(∅) = 0</li>
+                            <li>如果事件A与事件B互斥，那么P(A∪B) = P(A) + P(B)</li>
+                            <li>如果事件A与事件B互为对立事件，那么P(B) = 1 - P(A)，P(A) = 1 - P(B)</li>
+                            <li>如果A ⊆ B，那么P(A) ≤ P(B)</li>
+                            <li>P(A∪B) = P(A) + P(B) - P(A∩B)</li>
+                        </ul>
+                        
+                        <h4>2. 古典概型</h4>
+                        <p><strong>定义</strong>：具有以下两个特点的概率模型称为古典概率模型，简称古典概型：</p>
+                        <ul>
+                            <li>试验中所有可能出现的基本事件只有有限个</li>
+                            <li>每个基本事件出现的可能性相等</li>
+                        </ul>
+                        
+                        <p><strong>古典概型的概率公式</strong>：如果一次试验中可能出现的结果有n个，而且所有结果出现的可能性都相等，那么每一个基本事件的概率都是1/n。如果某个事件A包含的结果有m个，那么事件A的概率：
+                        $$P(A) = \frac{m}{n}$$</p>
+                        
+                        <h4>3. 几何概型</h4>
+                        <p><strong>定义</strong>：如果每个事件发生的概率只与构成该事件区域的长度（面积或体积）成比例，则称这样的概率模型为几何概率模型，简称几何概型。</p>
+                        
+                        <p><strong>几何概型的概率公式</strong>：
+                        $$P(A) = \frac{构成事件A的区域长度(面积或体积)}{试验的全部结果所构成的区域长度(面积或体积)}$$</p>
+                        
+                        <h4>4. 条件概率</h4>
+                        <p><strong>定义</strong>：设A、B为两个事件，且P(A) > 0，称：
+                        $$P(B|A) = \frac{P(A∩B)}{P(A)}$$为在事件A发生的条件下，事件B发生的条件概率。</p>
+                        
+                        <p><strong>条件概率的性质</strong>：</p>
+                        <ul>
+                            <li>0 ≤ P(B|A) ≤ 1</li>
+                            <li>如果B和C是互斥事件，那么P(B∪C|A) = P(B|A) + P(C|A)</li>
+                        </ul>
+                        
+                        <p><strong>乘法公式</strong>：
+                        $$P(A∩B) = P(A)P(B|A) = P(B)P(A|B)$$</p>
+                        
+                        <h4>5. 随机变量及其分布</h4>
+                        <p><strong>随机变量</strong>：随着试验结果变化而变化的变量叫做随机变量，常用字母X、Y、ξ、η等表示。</p>
+                        
+                        <p><strong>离散型随机变量</strong>：所有可能的取值可以一一列出的随机变量叫做离散型随机变量。</p>
+                        
+                        <p><strong>离散型随机变量的分布列</strong>：设离散型随机变量X可能取的值为x₁, x₂, …, xₙ，X取每一个值xᵢ(i = 1, 2, …, n)的概率P(X = xᵢ) = pᵢ，则称表：</p>
+                        <table class="math-table">
+                            <thead>
+                                <tr>
+                                    <th>X</th>
+                                    <th>x₁</th>
+                                    <th>x₂</th>
+                                    <th>…</th>
+                                    <th>xₙ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>P</th>
+                                    <th>p₁</th>
+                                    <th>p₂</th>
+                                    <th>…</th>
+                                    <th>pₙ</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>为离散型随机变量X的概率分布列，简称为X的分布列。</p>
+                        
+                        <p><strong>分布列的性质</strong>：</p>
+                        <ul>
+                            <li>pᵢ ≥ 0，i = 1, 2, …, n</li>
+                            <li>p₁ + p₂ + … + pₙ = 1</li>
+                        </ul>
+                        
+                        <p><strong>常见的离散型随机变量分布</strong>：</p>
+                        <ul>
+                            <li><strong>两点分布</strong>：如果随机变量X的分布列为：</li>
+                        </ul>
+                        <table class="math-table">
+                            <thead>
+                                <tr>
+                                    <th>X</th>
+                                    <th>0</th>
+                                    <th>1</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>P</th>
+                                    <th>1 - p</th>
+                                    <th>p</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>则称X服从两点分布，记作X ~ B(1, p)，其中p为成功概率。</p>
+                        
+                        <ul>
+                            <li><strong>二项分布</strong>：在n次独立重复试验中，设事件A发生的次数为X，在每次试验中事件A发生的概率为p，那么在n次独立重复试验中，事件A恰好发生k次的概率为：
+                            $$P(X = k) = Cₙᵏpᵏ(1 - p)ⁿ⁻ᵏ$$（k = 0, 1, 2, …, n）
+                            此时称随机变量X服从二项分布，记作X ~ B(n, p)。</li>
+                        </ul>
+                        
+                        <ul>
+                            <li><strong>超几何分布</strong>：一般地，在含有M件次品的N件产品中，任取n件，其中恰有X件次品，则事件{X = k}发生的概率为：
+                            $$P(X = k) = \frac{CₘᵏC_{N - M}^{n - k}}{Cₙᴺ}$$（k = 0, 1, 2, …, m，其中m = min{M, n}）
+                            此时称随机变量X服从超几何分布。</li>
+                        </ul>
+                        
+                        <h4>6. 随机变量的数字特征</h4>
+                        <p><strong>数学期望</strong>：设离散型随机变量X的分布列为P(X = xᵢ) = pᵢ，i = 1, 2, …, n，则称：
+                        $$E(X) = x₁p₁ + x₂p₂ + … + xₙpₙ$$为随机变量X的数学期望或均值，简称期望。</p>
+                        
+                        <p><strong>数学期望的性质</strong>：</p>
+                        <ul>
+                            <li>E(c) = c（c为常数）</li>
+                            <li>E(aX + b) = aE(X) + b（a, b为常数）</li>
+                            <li>E(X + Y) = E(X) + E(Y)</li>
+                            <li>如果X和Y相互独立，那么E(XY) = E(X)E(Y)</li>
+                        </ul>
+                        
+                        <p><strong>方差</strong>：设离散型随机变量X的分布列为P(X = xᵢ) = pᵢ，i = 1, 2, …, n，数学期望为E(X)，则称：
+                        $$D(X) = (x₁ - E(X))²p₁ + (x₂ - E(X))²p₂ + … + (xₙ - E(X))²pₙ$$为随机变量X的方差，其算术平方根√D(X)叫做随机变量X的标准差，记作σ(X)。</p>
+                        
+                        <p><strong>方差的性质</strong>：</p>
+                        <ul>
+                            <li>D(c) = 0（c为常数）</li>
+                            <li>D(aX + b) = a²D(X)（a, b为常数）</li>
+                            <li>D(X) = E(X²) - [E(X)]²</li>
+                        </ul>
+                        
+                        <h5>典型例题</h5>
+                        <p><strong>例1（基础题）</strong>：从装有2个红球和3个白球的口袋中任取2个球，求：
+                        （1）恰有1个红球的概率；
+                        （2）至少有1个红球的概率。</p>
+                        <p><strong>解析</strong>：
+                        （1）从5个球中任取2个球，共有C₅² = 10种取法。恰有1个红球的取法有C₂¹C₃¹ = 6种，所以恰有1个红球的概率为：
+                        $$P = \frac{6}{10} = \frac{3}{5}$$
+                        （2）至少有1个红球的对立事件是没有红球（即2个都是白球），没有红球的取法有C₃² = 3种，所以没有红球的概率为3/10，因此至少有1个红球的概率为：
+                        $$P = 1 - \frac{3}{10} = \frac{7}{10}$$</p>
+                        
+                        <p><strong>例2（中档题）</strong>：某射手每次射击击中目标的概率为0.8，求：
+                        （1）射击3次恰好击中2次的概率；
+                        （2）射击3次至少击中2次的概率。</p>
+                        <p><strong>解析</strong>：设射击3次击中目标的次数为X，则X ~ B(3, 0.8)。
+                        （1）射击3次恰好击中2次的概率为：
+                        $$P(X = 2) = C₃²(0.8)²(0.2)¹ = 3 × 0.64 × 0.2 = 0.384$$
+                        （2）射击3次至少击中2次的概率为：
+                        $$P(X ≥ 2) = P(X = 2) + P(X = 3) = C₃²(0.8)²(0.2)¹ + C₃³(0.8)³(0.2)⁰ = 0.384 + 0.512 = 0.896$$</p>
+                        
+                        <p><strong>例3（提高题）</strong>：设随机变量X的分布列为：</p>
+                        <table class="math-table">
+                            <thead>
+                                <tr>
+                                    <th>X</th>
+                                    <th>-2</th>
+                                    <th>-1</th>
+                                    <th>0</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>P</th>
+                                    <th>1/5</th>
+                                    <th>1/5</th>
+                                    <th>1/5</th>
+                                    <th>1/5</th>
+                                    <th>1/5</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>求：（1）E(X)；（2）D(X)；（3）E(2X + 3)；（4）D(2X + 3)。</p>
+                        <p><strong>解析</strong>：
+                        （1）
+                        $$E(X) = (-2)×\frac{1}{5} + (-1)×\frac{1}{5} + 0×\frac{1}{5} + 1×\frac{1}{5} + 2×\frac{1}{5} = 0$$
+                        （2）
+                        $$D(X) = (-2 - 0)²×\frac{1}{5} + (-1 - 0)²×\frac{1}{5} + (0 - 0)²×\frac{1}{5} + (1 - 0)²×\frac{1}{5} + (2 - 0)²×\frac{1}{5} = \frac{4 + 1 + 0 + 1 + 4}{5} = 2$$
+                        （3）
+                        $$E(2X + 3) = 2E(X) + 3 = 2×0 + 3 = 3$$
+                        （4）
+                        $$D(2X + 3) = 2²D(X) = 4×2 = 8$$</p>
+                        
+                        <h5>常见错误分析</h5>
+                        <ul>
+                            <li><strong>错误1</strong>：在计算概率时，混淆了“互斥事件”和“对立事件”的概念。<br><strong>正确做法</strong>：对立事件一定是互斥事件，但互斥事件不一定是对立事件。对立事件的概率和为1，互斥事件的概率和小于等于1。</li>
+                            <li><strong>错误2</strong>：在计算古典概型概率时，误将排列数当成组合数，或反之。<br><strong>正确做法</strong>：根据问题是否需要考虑顺序，选择正确的计数方法。</li>
+                            <li><strong>错误3</strong>：在计算二项分布概率时，误将试验次数n或成功概率p写错。<br><strong>正确做法</strong>：仔细分析试验次数和每次试验的成功概率，确保参数正确。</li>
+                            <li><strong>错误4</strong>：在计算数学期望时，误将概率乘以变量值的和当成数学期望。<br><strong>正确做法</strong>：数学期望是变量值乘以对应概率的和，不是概率乘以变量值的和。</li>
+                        </ul>
+                        
+                        <h5>解题技巧总结</h5>
+                        <ul>
+                            <li>对于概率问题，先判断事件的类型（古典概型、几何概型等），再选择对应的概率公式。</li>
+                            <li>利用互斥事件和对立事件的性质可以简化概率计算，特别是“至少有一个发生”的问题，常转化为对立事件计算。</li>
+                            <li>对于离散型随机变量，要正确写出分布列，验证分布列的性质，再计算数学期望和方差。</li>
+                            <li>记住常见分布（两点分布、二项分布、超几何分布）的数学期望和方差公式，可以快速解题。</li>
+                            <li>利用数学期望和方差的性质，可以简化复杂随机变量的期望和方差计算。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

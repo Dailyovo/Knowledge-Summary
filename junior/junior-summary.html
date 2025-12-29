@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 初中知识总结</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- MathJax配置 -->
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['(', ')'], ['\\(', '\\)'], ['$', '$']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['noerrors']}
+            },
+            options: {
+                renderActions: {
+                    addMenu: [0, '', '']
+                }
+            }
+        };
+    </script>
+    <!-- 引入数据文件 -->
+    <script src="../data/rootData.js"></script>
+    <script src="../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../js/modules/navigation.js"></script>
+    <script src="../js/modules/englishTemplatesModule.js"></script>
+    <script src="../js/modules/physicsModule.js"></script>
+    <script src="../js/modules/wordRootModule.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <a href="../index.html" class="nav-btn">返回首页</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 初中知识总结模块 -->
+        <section id="junior-summary" class="module active">
+            <h4 style="text-align: center;">初中知识总结</h4>
+            <div class="subject-selection">
+                <h4 style="text-align: center;">选择科目</h4>
+                <div class="subject-buttons">
+                    <a href="junior-math.html" class="subject-btn">初二数学</a>
+                    <a href="junior-biology.html" class="subject-btn">初二生物</a>
+                    <a href="junior-chinese.html" class="subject-btn">初二语文</a>
+                    <a href="junior-english.html" class="subject-btn">初二英语</a>
+                    <a href="physics-study.html" class="subject-btn">初二物理</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

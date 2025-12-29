@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 凸透镜学习</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- MathJax配置 -->
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['(', ')'], ['\\(', '\\)'], ['$', '$']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: {'[+]': ['noerrors']}
+            },
+            options: {
+                renderActions: {
+                    addMenu: [0, '', '']
+                }
+            }
+        };
+    </script>
+    <!-- 引入数据文件 -->
+    <script src="../data/rootData.js"></script>
+    <script src="../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../js/modules/navigation.js"></script>
+    <script src="../js/modules/englishTemplatesModule.js"></script>
+    <script src="../js/modules/physicsModule.js"></script>
+    <script src="../js/modules/wordRootModule.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <a href="../index.html" class="nav-btn">返回首页</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 凸透镜学习模块 -->
+        <section id="convex-lens" class="module active">
+            <h4 style="text-align: center;">凸透镜学习</h4>
+            <div class="math-container">
+                <!-- 1. 凸透镜的光学原理 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">凸透镜的光学原理</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>透镜的基本概念</h4>
+                                <p><strong>透镜</strong>：透镜是由透明材料（如玻璃、塑料等）制成的光学元件，表面是球面的一部分。</p>
+                                <p><strong>分类</strong>：
+                                    <ul>
+                                        <li><strong>凸透镜</strong>：中间厚、边缘薄的透镜，对光线有会聚作用，也称为会聚透镜。</li>
+                                        <li><strong>凹透镜</strong>：中间薄、边缘厚的透镜，对光线有发散作用，也称为发散透镜。</li>
+                                    </ul>
+                                </p>
+                                <p><strong>凸透镜的结构特征</strong>：
+                                    <ul>
+                                        <li><strong>主光轴</strong>：通过透镜两个球面球心的直线叫做主光轴，简称主轴。</li>
+                                        <li><strong>光心（O）</strong>：主光轴上的一个特殊点，通过光心的光线传播方向不变。</li>
+                                        <li><strong>焦点（F）</strong>：平行于主光轴的光线经凸透镜折射后会聚于主光轴上的一点，这个点叫做焦点。凸透镜有两个焦点，分别位于透镜的两侧。</li>
+                                        <li><strong>焦距（f）</strong>：焦点到光心的距离叫做焦距。</li>
+                                        <li><strong>物距（u）</strong>：物体到光心的距离叫做物距。</li>
+                                        <li><strong>像距（v）</strong>：像到光心的距离叫做像距。</li>
+                                    </ul>
+                                </p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>光的折射规律</h4>
+                                <p>凸透镜的成像原理基于光的折射规律：</p>
+                                <ul>
+                                    <li>光从空气斜射入玻璃时，折射角小于入射角</li>
+                                    <li>光从玻璃斜射入空气时，折射角大于入射角</li>
+                                    <li>垂直入射时，传播方向不变</li>
+                                    <li>折射光线、入射光线和法线在同一平面内</li>
+                                    <li>折射光线和入射光线分别位于法线两侧</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>凸透镜对光线的作用</h4>
+                                <p>凸透镜对光线具有会聚作用，主要体现在以下三种特殊光线的折射：</p>
+                                <ul>
+                                    <li><strong>平行于主光轴的光线</strong>：经凸透镜折射后，会聚于另一侧的焦点</li>
+                                    <li><strong>过焦点的光线</strong>：经凸透镜折射后，平行于主光轴</li>
+                                    <li><strong>过光心的光线</strong>：经凸透镜折射后，传播方向不变</li>
+                                </ul>
+                                <p>这三种特殊光线是分析凸透镜成像的基础，通过它们可以确定像的位置和性质。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>成像原理</h4>
+                                <p>物体发出的光线经凸透镜折射后，折射光线会聚形成实像，或折射光线的反向延长线会聚形成虚像。</p>
+                                <p><strong>实像</strong>：实际光线会聚形成的像，可以用光屏承接，倒立。</p>
+                                <p><strong>虚像</strong>：实际光线的反向延长线会聚形成的像，不能用光屏承接，正立。</p>
+                            </div>
+                        </div>
+                        <div class="math-image">
+                            <div class="convex-lens-diagram" id="convex-lens-diagram-1"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2. 凸透镜成像公式 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">凸透镜成像公式</h4>
+                    <div class="math-content">
+                        <div class="math-text">
+                            <div class="concept-detail">
+                                <h4>成像公式的推导</h4>
+                                <p>凸透镜成像公式，也称为高斯成像公式，是描述物距（u）、像距（v）和焦距（f）之间关系的数学表达式。</p>
+                                <p><strong>公式内容</strong>：</p>
+                                <div class="formula">
+                                    <p>1/f = 1/u + 1/v</p>
+                                </div>
+                                <p><strong>推导过程</strong>：</p>
+                                <p>利用相似三角形原理可以推导出凸透镜成像公式。如图所示，△ABO和△A'B'O是相似三角形，△COF和△A'B'F也是相似三角形。</p>
+                                <p>由△ABO∽△A'B'O，得：AB/A'B' = u/v</p>
+                                <p>由△COF∽△A'B'F，得：CO/A'B' = f/(v - f)</p>
+                                <p>由于CO = AB，所以：AB/A'B' = f/(v - f)</p>
+                                <p>因此：u/v = f/(v - f)</p>
+                                <p>整理得：1/f = 1/u + 1/v</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>符号规则</h4>
+                                <p>在使用凸透镜成像公式时，需要遵循一定的符号规则，通常采用“实正虚负”的规则：</p>
+                                <ul>
+                                    <li><strong>焦距（f）</strong>：凸透镜的焦距为正值，凹透镜的焦距为负值</li>
+                                    <li><strong>物距（u）</strong>：物体在凸透镜前方（实物）时，物距为正值；物体在凸透镜后方（虚物）时，物距为负值</li>
+                                    <li><strong>像距（v）</strong>：实像在凸透镜后方时，像距为正值；虚像在凸透镜前方时，像距为负值</li>
+                                </ul>
+                                <p>在初二阶段，我们主要研究实物成像，因此物距u始终为正值。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>公式的应用</h4>
+                                <p>凸透镜成像公式可以用于：</p>
+                                <ul>
+                                    <li>已知物距和焦距，求像距</li>
+                                    <li>已知像距和焦距，求物距</li>
+                                    <li>已知物距和像距，求焦距</li>
+                                    <li>判断像的性质（实像或虚像）</li>
+                                </ul>
+                                <p><strong>示例</strong>：已知凸透镜的焦距f=10cm，物距u=15cm，求像距v。</p>
+                                <p>解：根据公式1/f = 1/u + 1/v，代入数值得：</p>
+                                <p>1/10 = 1/15 + 1/v</p>
+                                <p>1/v = 1/10 - 1/15 = 1/30</p>
+                                <p>所以v=30cm，像距为正值，说明成实像。</p>
+                            </div>
+                            
+                            <div class="concept-detail">
+                                <h4>放大率</h4>
+                                <p>放大率是指像的大小与物体大小的比值，用m表示。</p>
+                                <p><strong>公式</strong>：</p>
+                                <div class="formula">
+                                    <p>m = |v/u| = 像高/物高</p>
+                                </div>
+                                <p><strong>含义</strong>：</p>
+                                <ul>
+                                    <li>当m > 1时，成放大的像</li>
+                                    <li>当m = 1时，成等大的像</li>
+                                    <li>当m < 1时，成缩小的像</li>
+                                    <li>放大率的绝对值表示像的大小与物体大小的比值</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="math-image">
+                            <div class="formula-diagram" id="formula-diagram"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3. 凸透镜成像规律 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">凸透镜成像规律</h4>
+                    <div class="math-content">
+                        <div class="concept-detail">
+                            <h4>成像规律表格</h4>
+                            <p>凸透镜成像规律可以通过表格形式总结，反映不同物距（u）下像距（v）和像的性质：</p>
+                            <table class="imaging-table">
+                                <thead>
+                                    <tr>
+                                        <th>物距（u）</th>
+                                        <th>像距（v）</th>
+                                        <th>像的性质</th>
+                                        <th>放大率（m）</th>
+                                        <th>应用实例</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>u > 2f</td>
+                                        <td>f < v < 2f</td>
+                                        <td>倒立、缩小、实像</td>
+                                        <td>m < 1</td>
+                                        <td>照相机、摄像机</td>
+                                    </tr>
+                                    <tr>
+                                        <td>u = 2f</td>
+                                        <td>v = 2f</td>
+                                        <td>倒立、等大、实像</td>
+                                        <td>m = 1</td>
+                                        <td>测焦距、复印机</td>
+                                    </tr>
+                                    <tr>
+                                        <td>f < u < 2f</td>
+                                        <td>v > 2f</td>
+                                        <td>倒立、放大、实像</td>
+                                        <td>m > 1</td>
+                                        <td>投影仪、电影放映机</td>
+                                    </tr>
+                                    <tr>
+                                        <td>u = f</td>
+                                        <td>v → ∞</td>
+                                        <td>不成像</td>
+                                        <td>—</td>
+                                        <td>平行光源、探照灯</td>
+                                    </tr>
+                                    <tr>
+                                        <td>u < f</td>
+                                        <td>v < 0（虚像）</td>
+                                        <td>正立、放大、虚像</td>
+                                        <td>m > 1</td>
+                                        <td>放大镜、老花镜</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h4>成像规律的记忆口诀</h4>
+                            <p>为了方便记忆凸透镜成像规律，可以使用以下口诀：</p>
+                            <div class="formula">
+                                <p>一倍焦距分虚实，二倍焦距分大小；</p>
+                                <p>物近像远像变大，物远像近像变小；</p>
+                                <p>实像倒立在异侧，虚像正立在同侧。</p>
+                            </div>
+                            <p><strong>口诀解释</strong>：</p>
+                            <ul>
+                                <li>一倍焦距是实像和虚像的分界点：u > f时成实像，u < f时成虚像</li>
+                                <li>二倍焦距是放大像和缩小像的分界点：u > 2f时成缩小像，f < u < 2f时成放大像</li>
+                                <li>物距减小，像距增大，像变大；物距增大，像距减小，像变小</li>
+                                <li>实像总是倒立的，位于透镜的另一侧；虚像总是正立的，位于透镜的同侧</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h4>应用实例</h4>
+                            <p>凸透镜成像规律在生活中有广泛的应用，以下是一些常见实例：</p>
+                            <ul>
+                                <li><strong>照相机</strong>：利用u > 2f时成倒立、缩小、实像的原理，将远处的景物成像在胶片或传感器上</li>
+                                <li><strong>投影仪</strong>：利用f < u < 2f时成倒立、放大、实像的原理，将幻灯片或投影片上的图像放大投射到屏幕上</li>
+                                <li><strong>放大镜</strong>：利用u < f时成正立、放大、虚像的原理，将物体放大便于观察</li>
+                                <li><strong>显微镜</strong>：由物镜和目镜组成，物镜成倒立、放大的实像，目镜成正立、放大的虚像，从而实现高倍放大</li>
+                                <li><strong>望远镜</strong>：由物镜和目镜组成，物镜成倒立、缩小的实像，目镜成正立、放大的虚像，从而观察远处物体</li>
+                                <li><strong>老花镜</strong>：利用凸透镜的会聚作用，矫正老花眼的视力问题</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h4>常见问题解析</h4>
+                            <div class="faq">
+                                <div class="faq-item">
+                                    <h5>Q：如何区分凸透镜和凹透镜？</h5>
+                                    <p>A：可以通过以下方法区分：</p>
+                                    <ul>
+                                        <li>观察形状：凸透镜中间厚、边缘薄；凹透镜中间薄、边缘厚</li>
+                                        <li>对光线的作用：凸透镜对光线有会聚作用；凹透镜对光线有发散作用</li>
+                                        <li>成像性质：凸透镜可以成实像或虚像；凹透镜只能成正立、缩小的虚像</li>
+                                        <li>放大作用：凸透镜可以放大物体；凹透镜只能缩小物体</li>
+                                    </ul>
+                                </div>
+                                <div class="faq-item">
+                                    <h5>Q：如何测量凸透镜的焦距？</h5>
+                                    <p>A：常用的测量方法有：</p>
+                                    <ul>
+                                        <li><strong>平行光法</strong>：让平行光（如太阳光）通过凸透镜，会聚于焦点，测量焦点到光心的距离即为焦距</li>
+                                        <li><strong>二倍焦距法</strong>：当物体放在2倍焦距处时，成等大的实像，此时物距等于像距，都等于2倍焦距，因此可以测量焦距</li>
+                                        <li><strong>焦点成像法</strong>：当物体放在焦点处时，不成像，光线平行射出，因此可以通过观察成像情况来确定焦点位置</li>
+                                    </ul>
+                                </div>
+                                <div class="faq-item">
+                                    <h5>Q：实像和虚像有什么区别？</h5>
+                                    <p>A：实像和虚像的主要区别：</p>
+                                    <ul>
+                                        <li><strong>形成原因</strong>：实像是实际光线会聚形成的；虚像是实际光线的反向延长线会聚形成的</li>
+                                        <li><strong>承接方式</strong>：实像可以用光屏承接；虚像不能用光屏承接</li>
+                                        <li><strong>成像性质</strong>：实像都是倒立的；虚像都是正立的（对于凸透镜成像）</li>
+                                        <li><strong>位置</strong>：实像位于透镜的另一侧；虚像位于透镜的同侧</li>
+                                    </ul>
+                                </div>
+                                <div class="faq-item">
+                                    <h5>Q：凸透镜成像时，物距变化，像距和像的大小如何变化？</h5>
+                                    <p>A：当物距减小时，像距增大，像变大；当物距增大时，像距减小，像变小。这一规律适用于实像和虚像。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h4>典型例题</h4>
+                            <div class="example">
+                                <h5>基础题</h5>
+                                <p>已知凸透镜的焦距为10cm，当物体放在离透镜15cm处时，成什么性质的像？</p>
+                                <p><strong>答案</strong>：倒立、放大的实像</p>
+                                <p><strong>解析</strong>：物距u=15cm，焦距f=10cm，满足f < u < 2f（10cm < 15cm < 20cm），根据成像规律，此时成倒立、放大的实像。</p>
+                            </div>
+                            
+                            <div class="example">
+                                <h5>中等题</h5>
+                                <p>用照相机拍照时，要使像变大，应该怎么做？</p>
+                                <p><strong>答案</strong>：减小物距，同时增大像距（即照相机靠近物体，镜头向前伸）</p>
+                                <p><strong>解析</strong>：根据成像规律，物近像远像变大，因此要使像变大，需要减小物距，同时增大像距。</p>
+                            </div>
+                            
+                            <div class="example">
+                                <h5>提高题</h5>
+                                <p>已知凸透镜的焦距为f，当物体从远处向透镜靠近时，像的变化情况是怎样的？</p>
+                                <p><strong>答案</strong>：当物体从远处向透镜靠近时，像从焦点处向远处移动，像的大小逐渐变大；当物体到达焦点时，不成像；当物体继续靠近透镜（u < f），像从透镜另一侧向同侧移动，仍然是正立、放大的虚像，且继续靠近透镜时，像变小。</p>
+                                <p><strong>解析</strong>：根据成像规律，结合物距变化对像距和像大小的影响，可以得出上述结论。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 4. 凸透镜实验 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">凸透镜实验：蜡烛成像观察</h4>
+                    <div class="math-content">
+                        <div class="concept-detail">
+                            <h4>实验目的</h4>
+                            <ul>
+                                <li>探究凸透镜成像的规律</li>
+                                <li>掌握物距、像距和焦距之间的关系</li>
+                                <li>学会使用光学仪器（凸透镜、光屏、蜡烛等）</li>
+                                <li>培养观察能力和实验操作能力</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h4>实验原理</h4>
+                            <p>利用凸透镜对光线的会聚作用，通过改变物距（u），观察像距（v）和像的性质的变化，从而总结出凸透镜成像的规律。</p>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h4>实验器材</h4>
+                            <ul>
+                                <li>凸透镜（焦距已知，如f=10cm）</li>
+                                <li>光屏</li>
+                                <li>蜡烛</li>
+                                <li>光具座（带刻度尺）</li>
+                                <li>火柴或打火机</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h4>实验步骤</h4>
+                            <ol>
+                                <li>将蜡烛、凸透镜、光屏依次安装在光具座上，使它们的中心大致在同一高度（共轴调节）</li>
+                                <li>点燃蜡烛，调整蜡烛、凸透镜、光屏的位置，使蜡烛的火焰、凸透镜的光心和光屏的中心在同一水平线上</li>
+                                <li>将蜡烛放在离凸透镜较远的位置（u > 2f），移动光屏，直到光屏上出现清晰的像，记录物距u、像距v和像的性质</li>
+                                <li>将蜡烛移到u = 2f的位置，移动光屏，记录像的性质和像距</li>
+                                <li>将蜡烛移到f < u < 2f的位置，移动光屏，记录像的性质和像距</li>
+                                <li>将蜡烛移到u = f的位置，观察是否成像</li>
+                                <li>将蜡烛移到u < f的位置，观察像的性质（此时无法用光屏承接，需要透过凸透镜观察）</li>
+                                <li>整理实验器材，熄灭蜡烛</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h4>实验现象与结论</h4>
+                            <p>通过实验，可以观察到以下现象：</p>
+                            <ul>
+                                <li>当u > 2f时，光屏上出现倒立、缩小的实像，f < v < 2f</li>
+                                <li>当u = 2f时，光屏上出现倒立、等大的实像，v = 2f</li>
+                                <li>当f < u < 2f时，光屏上出现倒立、放大的实像，v > 2f</li>
+                                <li>当u = f时，光屏上不成像，从光屏一侧透过凸透镜观察，也看不到像</li>
+                                <li>当u < f时，光屏上不成像，从光屏一侧透过凸透镜观察，可以看到正立、放大的虚像</li>
+                            </ul>
+                            <p><strong>实验结论</strong>：凸透镜成像的规律可以用下表总结：</p>
+                            <table class="imaging-table">
+                                <thead>
+                                    <tr>
+                                        <th>物距（u）</th>
+                                        <th>像距（v）</th>
+                                        <th>像的性质</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>u > 2f</td>
+                                        <td>f < v < 2f</td>
+                                        <td>倒立、缩小、实像</td>
+                                    </tr>
+                                    <tr>
+                                        <td>u = 2f</td>
+                                        <td>v = 2f</td>
+                                        <td>倒立、等大、实像</td>
+                                    </tr>
+                                    <tr>
+                                        <td>f < u < 2f</td>
+                                        <td>v > 2f</td>
+                                        <td>倒立、放大、实像</td>
+                                    </tr>
+                                    <tr>
+                                        <td>u = f</td>
+                                        <td>不成像</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td>u < f</td>
+                                        <td>v < 0（虚像）</td>
+                                        <td>正立、放大、虚像</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="concept-detail">
+                            <h4>实验注意事项</h4>
+                            <ul>
+                                <li>实验前要调节蜡烛、凸透镜、光屏的中心在同一高度，否则像会成在光屏的上方或下方，无法清晰观察</li>
+                                <li>实验时要在较暗的环境中进行，这样可以使光屏上的像更清晰</li>
+                                <li>移动蜡烛或凸透镜时，要缓慢移动，仔细观察光屏上的像，直到出现最清晰的像为止</li>
+                                <li>记录数据时要准确，注意单位的统一</li>
+                                <li>实验结束后要及时熄灭蜡烛，避免发生火灾</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="math-content">
+                        <p>下面是一个交互式的凸透镜成像实验，你可以通过移动滑块来改变凸透镜和蜡烛的位置，观察成像的变化：</p>
+                        <div class="experiment-container">
+                            <div class="optical-bench" id="optical-bench">
+                                <div class="bench-scale">
+                                    <div class="scale-mark" style="left: 0%;">0</div>
+                                    <div class="scale-mark" style="left: 10%;">10</div>
+                                    <div class="scale-mark" style="left: 20%;">20</div>
+                                    <div class="scale-mark" style="left: 30%;">30</div>
+                                    <div class="scale-mark" style="left: 40%;">40</div>
+                                    <div class="scale-mark" style="left: 50%;">50</div>
+                                    <div class="scale-mark" style="left: 60%;">60</div>
+                                    <div class="scale-mark" style="left: 70%;">70</div>
+                                    <div class="scale-mark" style="left: 80%;">80</div>
+                                    <div class="scale-mark" style="left: 90%;">90</div>
+                                    <div class="scale-mark" style="left: 100%;">100</div>
+                                </div>
+                                <div class="candle" id="candle" style="left: 15%;">
+                                    <div class="flame"></div>
+                                    <div class="candle-body"></div>
+                                </div>
+                                <div class="convex-lens" id="movable-lens" style="left: 50%;">
+                                    <div class="lens-body"></div>
+                                    <div class="lens-label">凸透镜</div>
+                                </div>
+                                <div class="screen" id="screen" style="left: 80%;">
+                                    <div class="screen-body" id="screen-body"></div>
+                                    <div class="screen-label">光屏</div>
+                                </div>
+                            </div>
+                            <div class="experiment-controls">
+                                <div class="control-group">
+                                    <label for="lens-slider">凸透镜位置：<span id="lens-position">50</span>cm</label>
+                                    <input type="range" id="lens-slider" min="20" max="80" value="50" step="1">
+                                </div>
+                                <div class="control-group">
+                                    <label for="candle-slider">蜡烛位置：<span id="candle-position">15</span>cm</label>
+                                    <input type="range" id="candle-slider" min="5" max="45" value="15" step="1">
+                                </div>
+                                <div class="image-info" id="image-info">
+                                    <p>成像性质：<span id="image-type">倒立、缩小、实像</span></p>
+                                    <p>像距：<span id="image-distance">60</span>cm</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5. 应用场景 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">应用场景</h4>
+                    <div class="math-content">
+                        <div class="application-scenario">
+                            <h4>日常生活中的应用</h4>
+                            <ul>
+                                <li><strong>照相机</strong>：利用凸透镜成倒立、缩小实像的原理，拍摄照片</li>
+                                <li><strong>投影仪</strong>：利用凸透镜成倒立、放大实像的原理，将图像投射到屏幕上</li>
+                                <li><strong>放大镜</strong>：利用凸透镜成正立、放大虚像的原理，放大物体便于观察</li>
+                                <li><strong>老花镜</strong>：利用凸透镜的会聚作用，矫正老花眼</li>
+                                <li><strong>显微镜</strong>：利用凸透镜的高倍放大作用，观察微小物体</li>
+                                <li><strong>望远镜</strong>：利用凸透镜观察远处物体</li>
+                            </ul>
+                            
+                            <h4>工业和科技中的应用</h4>
+                            <ul>
+                                <li><strong>光学仪器</strong>：如显微镜、望远镜、经纬仪等，广泛应用于科学研究和工业生产</li>
+                                <li><strong>摄影和摄像</strong>：照相机、摄像机、摄像头等，利用凸透镜成像原理</li>
+                                <li><strong>激光技术</strong>：激光束通过凸透镜聚焦，用于切割、焊接、打孔等工业加工</li>
+                                <li><strong>医疗设备</strong>：如内窥镜、眼底镜等，利用凸透镜成像原理观察人体内部结构</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 6. 拓展阅读 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">拓展阅读</h4>
+                    <div class="math-content">
+                        <div class="expansion-reading">
+                            <h4>凸透镜的历史</h4>
+                            <p>凸透镜的应用历史悠久，早在古代，人们就已经发现了凸透镜的会聚作用。在公元1世纪，古罗马哲学家塞内卡就描述了用凸透镜点火的方法。13世纪，欧洲出现了眼镜，用于矫正视力。17世纪，伽利略发明了望远镜，利用凸透镜观察天体，开创了天文学的新纪元。19世纪，照相机的发明，进一步推动了凸透镜的应用。</p>
+                            
+                            <h4>凸透镜与凹透镜的区别</h4>
+                            <p>凸透镜和凹透镜是两种常见的透镜，它们的区别主要体现在以下几个方面：</p>
+                            <ul>
+                                <li><strong>结构</strong>：凸透镜中间厚、边缘薄；凹透镜中间薄、边缘厚</li>
+                                <li><strong>对光线的作用</strong>：凸透镜对光线有会聚作用；凹透镜对光线有发散作用</li>
+                                <li><strong>成像性质</strong>：凸透镜可以成实像或虚像；凹透镜只能成正立、缩小的虚像</li>
+                                <li><strong>应用</strong>：凸透镜用于照相机、投影仪、放大镜等；凹透镜用于近视眼镜、门镜等</li>
+                            </ul>
+                            
+                            <h4>凸透镜的焦距测量方法</h4>
+                            <p>测量凸透镜焦距的方法有多种，除了实验中常用的平行光法和二倍焦距法外，还有以下方法：</p>
+                            <ul>
+                                <li><strong>自准直法</strong>：将物体放在凸透镜的一侧，移动物体，直到在物体同一侧出现等大、倒立的实像，此时物距等于二倍焦距</li>
+                                <li><strong>共轭法</strong>：利用物距和像距的共轭关系，通过测量两次成像的物距和像距，计算出焦距</li>
+                                <li><strong>公式法</strong>：利用凸透镜成像公式1/f = 1/u + 1/v，通过测量物距和像距，计算出焦距</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 7. 实践活动 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">实践活动</h4>
+                    <div class="math-content">
+                        <div class="practical-activity">
+                            <h4>自制凸透镜</h4>
+                            <p><strong>活动目标</strong>：学会自制凸透镜，了解凸透镜的基本性质</p>
+                            <p><strong>活动材料</strong>：透明塑料瓶、水、白纸、蜡烛</p>
+                            <p><strong>活动步骤</strong>：
+                                <ol>
+                                    <li>将透明塑料瓶装满水，拧紧瓶盖</li>
+                                    <li>用蜡烛在白纸上写一个小字体的字</li>
+                                    <li>将装满水的塑料瓶靠近白纸，观察字的变化</li>
+                                    <li>调整塑料瓶与白纸的距离，观察成像的变化</li>
+                                </ol>
+                            </p>
+                            <p><strong>思考问题</strong>：装满水的塑料瓶为什么能起到凸透镜的作用？</p>
+                            
+                            <h4>测量凸透镜的焦距</h4>
+                            <p><strong>活动目标</strong>：学会测量凸透镜的焦距</p>
+                            <p><strong>活动材料</strong>：凸透镜、白纸、刻度尺、阳光</p>
+                            <p><strong>活动步骤</strong>：
+                                <ol>
+                                    <li>将凸透镜正对阳光，调整凸透镜与白纸的距离，直到白纸上出现最小、最亮的光斑</li>
+                                    <li>用刻度尺测量凸透镜到光斑的距离，这个距离就是凸透镜的焦距</li>
+                                    <li>重复测量多次，取平均值，提高测量的准确性</li>
+                                </ol>
+                            </p>
+                            <p><strong>思考问题</strong>：为什么用阳光可以测量凸透镜的焦距？</p>
+                            
+                            <h4>探究凸透镜成像规律</h4>
+                            <p><strong>活动目标</strong>：通过实验探究凸透镜成像的规律</p>
+                            <p><strong>活动材料</strong>：凸透镜、光屏、蜡烛、光具座、火柴</p>
+                            <p><strong>活动步骤</strong>：
+                                <ol>
+                                    <li>将蜡烛、凸透镜、光屏依次安装在光具座上，调节它们的中心在同一高度</li>
+                                    <li>点燃蜡烛，将蜡烛放在离凸透镜较远的位置，移动光屏，观察成像情况</li>
+                                    <li>逐渐减小物距，观察像距和像的性质的变化</li>
+                                    <li>记录不同物距下的像距和像的性质</li>
+                                    <li>根据实验数据，总结凸透镜成像的规律</li>
+                                </ol>
+                            </p>
+                            <p><strong>思考问题</strong>：凸透镜成像的规律与物距、像距和焦距有什么关系？</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 8. 知识网络 -->
+                <div class="math-section">
+                    <h4 style="text-align: center;">知识网络</h4>
+                    <div class="math-content">
+                        <div class="knowledge-network">
+                            <p><strong>凸透镜知识体系</strong>：</p>
+                            <ul>
+                                <li><strong>凸透镜的基本概念</strong>
+                                    <ul>
+                                        <li>透镜的分类（凸透镜、凹透镜）</li>
+                                        <li>凸透镜的结构（主光轴、光心、焦点、焦距）</li>
+                                        <li>凸透镜对光线的作用（会聚作用）</li>
+                                        <li>三种特殊光线的折射规律</li>
+                                    </ul>
+                                </li>
+                                <li><strong>凸透镜成像公式</strong>
+                                    <ul>
+                                        <li>成像公式的推导</li>
+                                        <li>符号规则（实正虚负）</li>
+                                        <li>放大率公式</li>
+                                        <li>公式的应用</li>
+                                    </ul>
+                                </li>
+                                <li><strong>凸透镜成像规律</strong>
+                                    <ul>
+                                        <li>不同物距下的成像性质</li>
+                                        <li>成像规律的记忆口诀</li>
+                                        <li>实像和虚像的区别</li>
+                                    </ul>
+                                </li>
+                                <li><strong>凸透镜的应用</strong>
+                                    <ul>
+                                        <li>照相机</li>
+                                        <li>投影仪</li>
+                                        <li>放大镜</li>
+                                        <li>显微镜</li>
+                                        <li>望远镜</li>
+                                    </ul>
+                                </li>
+                                <li><strong>凸透镜实验</strong>
+                                    <ul>
+                                        <li>实验目的和原理</li>
+                                        <li>实验器材和步骤</li>
+                                        <li>实验现象和结论</li>
+                                        <li>实验注意事项</li>
+                                    </ul>
+                                </li>
+                                <li><strong>与其他知识的联系</strong>
+                                    <ul>
+                                        <li>光的折射规律</li>
+                                        <li>相似三角形原理</li>
+                                        <li>光学仪器的使用</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

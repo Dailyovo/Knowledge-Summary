@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 高二数学 - 圆锥曲线与方程</title>
+    <link rel="stylesheet" href="../../style.css?v=20251224">
+    <!-- MathJax配置 -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js" async></script>
+    <!-- 引入数据文件 -->
+    <script src="../../data/rootData.js"></script>
+    <script src="../../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../../js/modules/navigation.js"></script>
+    <script src="../../js/modules/englishTemplatesModule.js"></script>
+    <script src="../../js/modules/physicsModule.js"></script>
+    <script src="../../js/modules/wordRootModule.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="../../index.html" class="nav-link">返回首页</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 数学知识模块 -->
+        <section id="math" class="module active">
+            <h4 style="text-align: center;">圆锥曲线与方程</h4>
+            <div class="math-container">
+                <div class="math-section" id="conic-sections">
+                    
+                    <div class="math-content">
+                        <p><strong>概念阐释</strong>：圆锥曲线是平面与圆锥面相交得到的曲线，包括椭圆、双曲线和抛物线。它们在数学和物理学中有着广泛的应用，如行星轨道、卫星通信、光学系统等。</p>
+                        
+                        <h4>椭圆</h4>
+                        <div class="figure-container">
+                            <p><strong>示意图</strong>：椭圆是平面内到两个定点F₁、F₂的距离之和为常数的点的轨迹，形状为一个闭合的曲线。</p>
+                            <div class="ellipse-diagram">
+                                <p>● F₁ (-c, 0)  ○ 椭圆上任意一点 P(x, y)  ● F₂ (c, 0)</p>
+                                <p>长轴：2a，短轴：2b，焦距：2c，满足关系：a² = b² + c²</p>
+                                <p>离心率：e = c/a（0 < e < 1）</p>
+                            </div>
+                        </div>
+                        <p><strong>定义</strong>：平面内与两个定点F₁、F₂的距离之和等于常数（大于|F₁F₂|）的点的轨迹。两个定点称为椭圆的焦点，两焦点间的距离称为焦距。</p>
+                        
+                        <p><strong>公式推导</strong>：设椭圆上任意一点P(x, y)，两焦点F₁(-c, 0)，F₂(c, 0)，则根据定义有：
+                        $$|PF₁| + |PF₂| = 2a$$（2a > 2c）
+                        代入距离公式得：
+                        $$\sqrt{(x + c)^2 + y^2} + \sqrt{(x - c)^2 + y^2} = 2a$$
+                        移项并平方后化简可得：
+                        $$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$（其中b² = a² - c²，a > b > 0）</p>
+                        
+                        <p><strong>标准方程</strong>：</p>
+                        <ul>
+                            <li>焦点在x轴上：$ \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 $（a > b > 0）</li>
+                            <li>焦点在y轴上：$ \frac{y^2}{a^2} + \frac{x^2}{b^2} = 1 $（a > b > 0）</li>
+                        </ul>
+                        
+                        <p><strong>性质</strong>：</p>
+                        <ul>
+                            <li>长半轴长：a，短半轴长：b</li>
+                            <li>焦距：2c，其中c² = a² - b²</li>
+                            <li>离心率：$ e = \frac{c}{a} $（0 < e < 1），离心率越大，椭圆越扁平</li>
+                            <li>顶点坐标：$ (±a, 0) $（焦点在x轴上）</li>
+                            <li>焦点坐标：$ (±c, 0) $（焦点在x轴上）</li>
+                            <li>对称轴：x轴和y轴</li>
+                            <li>准线方程：$ x = ±\frac{a^2}{c} $（焦点在x轴上）</li>
+                        </ul>
+                        
+                        <h5>典型例题</h5>
+                        <p><strong>例1（基础题）</strong>：已知椭圆的焦点在x轴上，长轴长为10，焦距为6，求椭圆的标准方程。</p>
+                        <p><strong>解析</strong>：由题意知，2a = 10 ⇒ a = 5；2c = 6 ⇒ c = 3。则b² = a² - c² = 25 - 9 = 16。因此，椭圆的标准方程为：$ \frac{x^2}{25} + \frac{y^2}{16} = 1 $</p>
+                        
+                        <p><strong>例2（中档题）</strong>：已知椭圆$ \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 $（a > b > 0）的离心率为$ \frac{1}{2} $，且过点$(2, \sqrt{3})$，求椭圆的标准方程。</p>
+                        <p><strong>解析</strong>：由离心率$ e = \frac{c}{a} = \frac{1}{2} $，得c = $ \frac{a}{2} $，则b² = a² - c² = $ \frac{3a²}{4} $。将点$(2, \sqrt{3})$代入椭圆方程得：$ \frac{4}{a²} + \frac{3}{\frac{3a²}{4}} = 1 $，解得a² = 8，b² = 6。因此，椭圆的标准方程为：$ \frac{x^2}{8} + \frac{y^2}{6} = 1 $</p>
+                        
+                        <p><strong>例3（提高题）</strong>：已知椭圆$ \frac{x^2}{25} + \frac{y^2}{16} = 1 $，点P(3, 4)在椭圆上，求点P到两焦点的距离之和。</p>
+                        <p><strong>解析</strong>：根据椭圆的定义，椭圆上任意一点到两焦点的距离之和等于2a。由椭圆方程知a = 5，因此点P到两焦点的距离之和为2×5 = 10。</p>
+                        
+                        <h5>常见错误分析</h5>
+                        <ul>
+                            <li><strong>错误1</strong>：混淆椭圆的长半轴和短半轴，将a和b的大小关系搞反。<br><strong>正确做法</strong>：记住a > b > 0，a是长半轴，b是短半轴。</li>
+                            <li><strong>错误2</strong>：误将离心率公式记为$ e = \frac{b}{a} $或$ e = \frac{c}{b} $。<br><strong>正确做法</strong>：椭圆离心率公式是$ e = \frac{c}{a} $，且0 < e < 1。</li>
+                            <li><strong>错误3</strong>：在求标准方程时，忘记根据焦点位置选择正确的方程形式。<br><strong>正确做法</strong>：先确定焦点位置，再代入相应的标准方程形式。</li>
+                        </ul>
+                        
+                        <h5>解题技巧总结</h5>
+                        <ul>
+                            <li>利用椭圆的定义解题，特别是涉及焦点距离之和的问题。</li>
+                            <li>记住a、b、c之间的关系：b² = a² - c²，这是解决椭圆问题的关键。</li>
+                            <li>离心率反映了椭圆的扁平程度，可用于判断椭圆的形状。</li>
+                            <li>对于过定点的椭圆问题，通常采用待定系数法求解。</li>
+                        </ul>
+                        
+                        <h4>双曲线</h4>
+                        <div class="figure-container">
+                            <p><strong>示意图</strong>：双曲线是平面内到两个定点F₁、F₂的距离之差的绝对值为常数的点的轨迹，形状为两个对称的分支。</p>
+                            <div class="hyperbola-diagram">
+                                <p>● F₁ (-c, 0)  ○ 双曲线上任意一点 P(x, y)  ● F₂ (c, 0)</p>
+                                <p>实轴：2a，虚轴：2b，焦距：2c，满足关系：c² = a² + b²</p>
+                                <p>渐近线：y = ±(b/a)x（焦点在x轴上）</p>
+                            </div>
+                        </div>
+                        <p><strong>定义</strong>：平面内与两个定点F₁、F₂的距离之差的绝对值等于常数（小于|F₁F₂|）的点的轨迹。两个定点称为双曲线的焦点，两焦点间的距离称为焦距。</p>
+                        
+                        <p><strong>公式推导</strong>：设双曲线上任意一点P(x, y)，两焦点F₁(-c, 0)，F₂(c, 0)，则根据定义有：
+                        $$||PF₁| - |PF₂|| = 2a$$（2a < 2c）
+                        代入距离公式得：
+                        $$|\sqrt{(x + c)^2 + y^2} - \sqrt{(x - c)^2 + y^2}| = 2a$$
+                        移项并平方后化简可得：
+                        $$\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$$（其中b² = c² - a²，a > 0, b > 0）</p>
+                        
+                        <p><strong>标准方程</strong>：</p>
+                        <ul>
+                            <li>焦点在x轴上：$ \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 $（a > 0, b > 0）</li>
+                            <li>焦点在y轴上：$ \frac{y^2}{a^2} - \frac{x^2}{b^2} = 1 $（a > 0, b > 0）</li>
+                        </ul>
+                        
+                        <p><strong>性质</strong>：</p>
+                        <ul>
+                            <li>实半轴长：a，虚半轴长：b</li>
+                            <li>焦距：2c，其中c² = a² + b²</li>
+                            <li>离心率：$ e = \frac{c}{a} $（e > 1），离心率越大，双曲线的开口越开阔</li>
+                            <li>顶点坐标：$ (±a, 0) $（焦点在x轴上）</li>
+                            <li>焦点坐标：$ (±c, 0) $（焦点在x轴上）</li>
+                            <li>渐近线方程：$ y = ±\frac{b}{a}x $（焦点在x轴上）或$ y = ±\frac{a}{b}x $（焦点在y轴上）</li>
+                            <li>准线方程：$ x = ±\frac{a^2}{c} $（焦点在x轴上）</li>
+                        </ul>
+                        
+                        <h5>典型例题</h5>
+                        <p><strong>例1（基础题）</strong>：已知双曲线的焦点在x轴上，实轴长为6，焦距为10，求双曲线的标准方程。</p>
+                        <p><strong>解析</strong>：由题意知，2a = 6 ⇒ a = 3；2c = 10 ⇒ c = 5。则b² = c² - a² = 25 - 9 = 16。因此，双曲线的标准方程为：$ \frac{x^2}{9} - \frac{y^2}{16} = 1 $</p>
+                        
+                        <p><strong>例2（中档题）</strong>：已知双曲线的渐近线方程为$ y = ±\frac{3}{4}x $，且过点$(4, 3\sqrt{2})$，求双曲线的标准方程。</p>
+                        <p><strong>解析</strong>：由渐近线方程$ y = ±\frac{3}{4}x $，可设双曲线方程为$ \frac{x^2}{16} - \frac{y^2}{9} = k $（k ≠ 0）。将点(4, 3\sqrt{2})代入得：$ \frac{16}{16} - \frac{18}{9} = k $ ⇒ 1 - 2 = k ⇒ k = -1。因此，双曲线的标准方程为：$ \frac{y^2}{9} - \frac{x^2}{16} = 1 $</p>
+                        
+                        <p><strong>例3（提高题）</strong>：已知双曲线$ \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 $（a > 0, b > 0）的离心率为2，且与椭圆$ \frac{x^2}{25} + \frac{y^2}{9} = 1 $有相同的焦点，求双曲线的方程。</p>
+                        <p><strong>解析</strong>：椭圆$ \frac{x^2}{25} + \frac{y^2}{9} = 1 $的焦点坐标为$ (±4, 0) $，因此双曲线的c = 4。由离心率$ e = \frac{c}{a} = 2 $，得a = 2。则b² = c² - a² = 16 - 4 = 12。因此，双曲线的标准方程为：$ \frac{x^2}{4} - \frac{y^2}{12} = 1 $</p>
+                        
+                        <h5>常见错误分析</h5>
+                        <ul>
+                            <li><strong>错误1</strong>：混淆双曲线的实半轴和虚半轴，误将b² = c² - a²记为b² = a² - c²。<br><strong>正确做法</strong>：双曲线中b² = c² - a²，而椭圆中b² = a² - c²，两者要区分清楚。</li>
+                            <li><strong>错误2</strong>：忘记双曲线渐近线方程的符号，或混淆焦点在x轴和y轴时的渐近线方程。<br><strong>正确做法</strong>：焦点在x轴上时，渐近线方程为$ y = ±\frac{b}{a}x $；焦点在y轴上时，渐近线方程为$ y = ±\frac{a}{b}x $。</li>
+                            <li><strong>错误3</strong>：误将双曲线的离心率范围记为0 < e < 1。<br><strong>正确做法</strong>：双曲线的离心率e > 1，而椭圆的离心率0 < e < 1。</li>
+                        </ul>
+                        
+                        <h5>解题技巧总结</h5>
+                        <ul>
+                            <li>利用双曲线的定义解题，特别是涉及焦点距离之差的问题。</li>
+                            <li>记住a、b、c之间的关系：b² = c² - a²，这是解决双曲线问题的关键。</li>
+                            <li>渐近线是双曲线的重要特征，可用于求双曲线的方程。</li>
+                            <li>对于与椭圆有相同焦点的双曲线问题，可利用椭圆的焦点坐标确定双曲线的c值。</li>
+                        </ul>
+                        
+                        <h4>抛物线</h4>
+                        <div class="figure-container">
+                            <p><strong>示意图</strong>：抛物线是平面内到一个定点F和一条定直线l距离相等的点的轨迹，形状为一条对称的曲线。</p>
+                            <div class="parabola-diagram">
+                                <p>● F (p/2, 0)  ○ 抛物线上任意一点 P(x, y)  ── 准线 l: x = -p/2</p>
+                                <p>开口方向：向右（当p > 0时）</p>
+                                <p>顶点：(0, 0)，焦点到顶点的距离：p/2</p>
+                                <p>满足关系：|PF| = d(P, l)</p>
+                            </div>
+                        </div>
+                        <p><strong>定义</strong>：平面内与一个定点F和一条定直线l（l不经过F）的距离相等的点的轨迹。定点F称为抛物线的焦点，定直线l称为抛物线的准线。</p>
+                        
+                        <p><strong>公式推导</strong>：设抛物线的焦点$F(\frac{p}{2}, 0)$，准线l：$x = -\frac{p}{2}$（p > 0），抛物线上任意一点P(x, y)，则根据定义有：
+                        $$|PF| = d(P, l)$$
+                        代入距离公式得：
+                        $$\sqrt{(x - \frac{p}{2})^2 + y^2} = |x + \frac{p}{2}|$$
+                        平方后化简可得：
+                        $$y^2 = 2px$$（p > 0）</p>
+                        
+                        <p><strong>标准方程</strong>：</p>
+                        <table class="math-table">
+                            <thead>
+                                <tr>
+                                    <th>开口方向</th>
+                                    <th>标准方程</th>
+                                    <th>焦点坐标</th>
+                                    <th>准线方程</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>向右</td>
+                                    <td>$ y^2 = 2px $（p > 0）</td>
+                                    <td>$ (\frac{p}{2}, 0) $</td>
+                                    <td>$ x = -\frac{p}{2} $</td>
+                                </tr>
+                                <tr>
+                                    <td>向左</td>
+                                    <td>$ y^2 = -2px $（p > 0）</td>
+                                    <td>$ (-\frac{p}{2}, 0) $</td>
+                                    <td>$ x = \frac{p}{2} $</td>
+                                </tr>
+                                <tr>
+                                    <td>向上</td>
+                                    <td>$ x^2 = 2py $（p > 0）</td>
+                                    <td>$ (0, \frac{p}{2}) $</td>
+                                    <td>$ y = -\frac{p}{2} $</td>
+                                </tr>
+                                <tr>
+                                    <td>向下</td>
+                                    <td>$ x^2 = -2py $（p > 0）</td>
+                                    <td>$ (0, -\frac{p}{2}) $</td>
+                                    <td>$ y = \frac{p}{2} $</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <p><strong>性质</strong>：</p>
+                        <ul>
+                            <li>焦点到准线的距离为p</li>
+                            <li>顶点在原点，对称轴为坐标轴</li>
+                            <li>离心率e = 1</li>
+                            <li>抛物线上任意一点到焦点的距离等于到准线的距离（定义）</li>
+                        </ul>
+                        
+                        <h5>典型例题</h5>
+                        <p><strong>例1（基础题）</strong>：已知抛物线的焦点坐标为$(2, 0)$，求抛物线的标准方程。</p>
+                        <p><strong>解析</strong>：由焦点坐标$(2, 0)$可知，抛物线开口向右，且$ \frac{p}{2} = 2 $ ⇒ p = 4。因此，抛物线的标准方程为：$ y^2 = 8x $</p>
+                        
+                        <p><strong>例2（中档题）</strong>：已知抛物线$ y^2 = 4x $，过焦点F的直线交抛物线于A、B两点，若|AB| = 8，求直线AB的方程。</p>
+                        <p><strong>解析</strong>：抛物线$ y^2 = 4x $的焦点$ F(1, 0) $，准线方程$ x = -1 $。设直线AB的方程为y = k(x - 1)（k ≠ 0），代入抛物线方程得：k²x² - (2k² + 4)x + k² = 0。设A(x₁, y₁)，B(x₂, y₂)，则x₁ + x₂ = (2k² + 4)/k²。根据抛物线的定义，|AB| = x₁ + x₂ + 2 = 8 ⇒ x₁ + x₂ = 6。因此，(2k² + 4)/k² = 6 ⇒ k² = 1 ⇒ k = ±1。所以直线AB的方程为y = x - 1或y = -x + 1。</p>
+                        
+                        <p><strong>例3（提高题）</strong>：已知抛物线$ y^2 = 2px $（p > 0）上一点M(4, m)到焦点的距离为5，求抛物线的方程及m的值。</p>
+                        <p><strong>解析</strong>：根据抛物线的定义，点M到焦点的距离等于到准线的距离。抛物线的准线方程为$ x = -\frac{p}{2} $，因此有$ 4 + \frac{p}{2} = 5 $ ⇒ p = 2。所以抛物线的方程为$ y^2 = 4x $。将点M(4, m)代入得：$ m^2 = 16 $ ⇒ m = ±4。</p>
+                        
+                        <h5>常见错误分析</h5>
+                        <ul>
+                            <li><strong>错误1</strong>：混淆抛物线的开口方向，误将标准方程写错。<br><strong>正确做法</strong>：根据焦点位置或准线方程确定抛物线的开口方向，再选择正确的标准方程。</li>
+                            <li><strong>错误2</strong>：忘记抛物线的定义，在求焦点距离时直接使用两点间距离公式，导致计算复杂。<br><strong>正确做法</strong>：利用抛物线的定义，抛物线上任意一点到焦点的距离等于到准线的距离，可简化计算。</li>
+                            <li><strong>错误3</strong>：误将p的几何意义记为焦点到顶点的距离。<br><strong>正确做法</strong>：p是焦点到准线的距离，顶点到焦点的距离是\frac{p}{2}。</li>
+                        </ul>
+                        
+                        <h5>解题技巧总结</h5>
+                        <ul>
+                            <li>利用抛物线的定义解题，特别是涉及焦点距离的问题。</li>
+                            <li>记住不同开口方向的抛物线标准方程、焦点坐标和准线方程。</li>
+                            <li>对于过焦点的直线与抛物线相交的问题，可利用韦达定理结合抛物线的定义求解弦长。</li>
+                            <li>注意p的几何意义：焦点到准线的距离，这是解决抛物线问题的关键。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习助手 - 高二化学 - 电化学基础</title>
+    <link rel="stylesheet" href="../../style.css?v=20251224">
+    <!-- MathJax配置 -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+    <!-- 引入数据文件 -->
+    <script src="../../data/rootData.js"></script>
+    <script src="../../data/templateData.js"></script>
+    <!-- 引入模块文件 -->
+    <script src="../../js/modules/navigation.js"></script>
+    <script src="../../js/modules/englishTemplatesModule.js"></script>
+    <script src="../../js/modules/physicsModule.js"></script>
+    <script src="../../js/modules/wordRootModule.js"></script>
+    <script src="../../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>学习助手</h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="../../index.html" class="nav-link">返回首页</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 化学知识模块 -->
+        <section id="chemistry" class="module active">
+            <h4 style="text-align: center;">电化学基础</h4>
+            <div class="math-container">
+                <div class="math-section">
+                    
+                    <div class="math-content">
+                        <h4>1. 原电池</h4>
+                        <p><strong>定义</strong>：将化学能转化为电能的装置</p>
+                        <p><strong>工作原理</strong>：通过氧化还原反应，电子从负极流向正极，产生电流</p>
+                        <p><strong>构成条件</strong>：</p>
+                        <ul>
+                            <li>两个活泼性不同的电极（正极和负极）</li>
+                            <li>电解质溶液</li>
+                            <li>形成闭合回路</li>
+                            <li>自发的氧化还原反应</li>
+                        </ul>
+                        <p><strong>电极反应</strong>：</p>
+                        <ul>
+                            <li>负极：发生氧化反应，失去电子，电子流出</li>
+                            <li>正极：发生还原反应，得到电子，电子流入</li>
+                        </ul>
+                        <p><strong>原电池的表示方法</strong>：（-）Zn | Zn²⁺（c₁）|| Cu²⁺（c₂）| Cu（+）</p>
+
+                        <h5>典型例题</h5>
+                        <div class="example">
+                            <h6>例题1：基础题</h6>
+                            <p>下列装置中，能构成原电池的是（ ）</p>
+                            <p>A. 两个铜电极插入稀硫酸中</p>
+                            <p>B. 铜片和锌片插入稀硫酸中，用导线连接</p>
+                            <p>C. 铜片和锌片插入硫酸铜溶液中，没有导线连接</p>
+                            <p>D. 铜片和锌片插入酒精中，用导线连接</p>
+                            <p><strong>答案</strong>：B</p>
+                            <p><strong>解析</strong>：构成原电池需要两个活泼性不同的电极、电解质溶液、闭合回路和自发的氧化还原反应。A选项两个电极相同，不能构成原电池；C选项没有形成闭合回路；D选项酒精不是电解质溶液，不能构成原电池。</p>
+                        </div>
+
+                        <div class="example">
+                            <h6>例题2：中等题</h6>
+                            <p>将锌片和铜片插入稀硫酸中，用导线连接，下列说法正确的是（ ）</p>
+                            <p>A. 锌片是正极，发生还原反应</p>
+                            <p>B. 铜片是负极，发生氧化反应</p>
+                            <p>C. 电子从锌片流向铜片</p>
+                            <p>D. 电流从锌片流向铜片</p>
+                            <p><strong>答案</strong>：C</p>
+                            <p><strong>解析</strong>：锌的活泼性比铜强，所以锌是负极，发生氧化反应；铜是正极，发生还原反应。电子从负极（锌片）流向正极（铜片），电流方向与电子流向相反。</p>
+                        </div>
+
+                        <div class="example">
+                            <h6>例题3：提高题</h6>
+                            <p>某原电池总反应为：Zn + Cu²⁺ = Zn²⁺ + Cu，下列关于该原电池的说法正确的是（ ）</p>
+                            <p>A. 负极材料为Cu，正极材料为Zn</p>
+                            <p>B. 电解质溶液可以是稀盐酸</p>
+                            <p>C. 正极反应式为：Cu²⁺ + 2e⁻ = Cu</p>
+                            <p>D. 电子从正极流向负极</p>
+                            <p><strong>答案</strong>：C</p>
+                            <p><strong>解析</strong>：根据总反应，Zn失去电子，所以Zn是负极，Cu²⁺得到电子，所以正极反应式为Cu²⁺ + 2e⁻ = Cu。电解质溶液应含有Cu²⁺，如硫酸铜溶液，稀盐酸中没有Cu²⁺，不能构成该原电池。</p>
+                        </div>
+
+                        <h5>常见错误分析</h5>
+                        <div class="error-analysis">
+                            <ul>
+                                <li><strong>错误1</strong>：认为所有金属都能作为原电池的电极。实际上，两个电极的活泼性必须不同。</li>
+                                <li><strong>错误2</strong>：混淆电子流向和电流流向。电子从负极流向正极，电流从正极流向负极。</li>
+                                <li><strong>错误3</strong>：忽略电解质溶液的作用。电解质溶液必须能导电，且参与或促进氧化还原反应。</li>
+                            </ul>
+                        </div>
+
+                        <h5>解题技巧总结</h5>
+                        <div class="tips">
+                            <ul>
+                                <li>判断原电池的正负极：活泼金属作负极，不活泼金属或导电非金属作正极。</li>
+                                <li>书写电极反应式：负极发生氧化反应，正极发生还原反应，注意电荷守恒和质量守恒。</li>
+                                <li>分析原电池的工作原理：从氧化还原反应的角度理解电子转移过程。</li>
+                            </ul>
+                        </div>
+
+                        <h4>2. 电解池</h4>
+                        <p><strong>定义</strong>：将电能转化为化学能的装置</p>
+                        <p><strong>工作原理</strong>：通过外加电源，使电解质溶液或熔融电解质发生氧化还原反应</p>
+                        <p><strong>构成条件</strong>：</p>
+                        <ul>
+                            <li>直流电源</li>
+                            <li>两个电极（阳极和阴极）</li>
+                            <li>电解质溶液或熔融电解质</li>
+                            <li>形成闭合回路</li>
+                        </ul>
+                        <p><strong>电极反应</strong>：</p>
+                        <ul>
+                            <li>阳极：与电源正极相连，发生氧化反应，失去电子</li>
+                            <li>阴极：与电源负极相连，发生还原反应，得到电子</li>
+                        </ul>
+                        <p><strong>电解规律</strong>：</p>
+                        <ul>
+                            <li>阳离子放电顺序（从难到易）：K⁺ < Na⁺ < Ca²⁺ < Mg²⁺ < Al³⁺ < H⁺ < Cu²⁺ < Fe³⁺ < Ag⁺</li>
+                            <li>阴离子放电顺序（从难到易）：S²⁻ > I⁻ > Br⁻ > Cl⁻ > OH⁻ > 含氧酸根</li>
+                        </ul>
+
+                        <h5>典型例题</h5>
+                        <div class="example">
+                            <h6>例题1：基础题</h6>
+                            <p>下列关于电解池的说法正确的是（ ）</p>
+                            <p>A. 电解池的阳极发生还原反应</p>
+                            <p>B. 电解池的阴极与电源正极相连</p>
+                            <p>C. 电解池中电子从阳极流向阴极</p>
+                            <p>D. 电解池是将电能转化为化学能的装置</p>
+                            <p><strong>答案</strong>：D</p>
+                            <p><strong>解析</strong>：电解池的阳极发生氧化反应，阴极发生还原反应；阳极与电源正极相连，阴极与电源负极相连；电子从电源负极流向阴极，从阳极流向电源正极。</p>
+                        </div>
+
+                        <div class="example">
+                            <h6>例题2：中等题</h6>
+                            <p>用惰性电极电解饱和食盐水，下列说法正确的是（ ）</p>
+                            <p>A. 阳极产生H₂</p>
+                            <p>B. 阴极产生Cl₂</p>
+                            <p>C. 溶液的pH增大</p>
+                            <p>D. 总反应式为：2NaCl + 2H₂O 电解 2NaOH + H₂↑ + Cl₂↑</p>
+                            <p><strong>答案</strong>：CD</p>
+                            <p><strong>解析</strong>：用惰性电极电解饱和食盐水，阳极发生反应：2Cl⁻ - 2e⁻ = Cl₂↑，阴极发生反应：2H₂O + 2e⁻ = H₂↑ + 2OH⁻，总反应式为2NaCl + 2H₂O 电解 2NaOH + H₂↑ + Cl₂↑，溶液的pH增大。</p>
+                        </div>
+
+                        <div class="example">
+                            <h6>例题3：提高题</h6>
+                            <p>用惰性电极电解硫酸铜溶液，当电路中通过0.5mol电子时，下列说法正确的是（ ）</p>
+                            <p>A. 阴极析出16g Cu</p>
+                            <p>B. 阳极析出0.5mol O₂</p>
+                            <p>C. 溶液中Cu²⁺浓度减小</p>
+                            <p>D. 溶液的pH减小</p>
+                            <p><strong>答案</strong>：AC</p>
+                            <p><strong>解析</strong>：用惰性电极电解硫酸铜溶液，阴极发生反应：Cu²⁺ + 2e⁻ = Cu，阳极发生反应：2H₂O - 4e⁻ = O₂↑ + 4H⁺。当电路中通过0.5mol电子时，阴极析出0.25mol Cu（16g），阳极析出0.125mol O₂。溶液中Cu²⁺浓度减小，H⁺浓度增大，pH减小。</p>
+                        </div>
+
+                        <h5>常见错误分析</h5>
+                        <div class="error-analysis">
+                            <ul>
+                                <li><strong>错误1</strong>：混淆电解池的阴阳极与原电池的正负极。电解池的阳极与电源正极相连，阴极与电源负极相连。</li>
+                                <li><strong>错误2</strong>：忽略电极材料的影响。惰性电极（如Pt、石墨）不参与反应，活性电极（如Cu、Fe）作阳极时会参与反应。</li>
+                                <li><strong>错误3</strong>：错误判断放电顺序。阳离子放电顺序与金属活动性顺序相反，阴离子放电顺序与非金属性顺序有关。</li>
+                            </ul>
+                        </div>
+
+                        <h5>解题技巧总结</h5>
+                        <div class="tips">
+                            <ul>
+                                <li>判断电解池的阴阳极：与电源正极相连的是阳极，与电源负极相连的是阴极。</li>
+                                <li>确定放电顺序：根据离子的氧化性和还原性强弱判断放电顺序。</li>
+                                <li>书写电极反应式：阳极发生氧化反应，阴极发生还原反应，注意电解质溶液的酸碱性。</li>
+                                <li>计算电解产物的量：根据电子守恒进行计算。</li>
+                            </ul>
+                        </div>
+
+                        <h4>3. 金属的腐蚀与防护</h4>
+                        <p><strong>金属腐蚀的定义</strong>：金属或合金与周围环境中的物质发生化学反应而腐蚀损耗的现象</p>
+                        <p><strong>金属腐蚀的分类</strong>：</p>
+                        <ul>
+                            <li><strong>化学腐蚀</strong>：金属与非电解质直接发生化学反应而引起的腐蚀</li>
+                            <li><strong>电化学腐蚀</strong>：金属与电解质溶液构成原电池，发生氧化还原反应而引起的腐蚀</li>
+                        </ul>
+                        <p><strong>电化学腐蚀的类型</strong>：</p>
+                        <ul>
+                            <li><strong>析氢腐蚀</strong>：在酸性环境中，正极反应式为：2H⁺ + 2e⁻ = H₂↑</li>
+                            <li><strong>吸氧腐蚀</strong>：在中性或弱酸性环境中，正极反应式为：O₂ + 2H₂O + 4e⁻ = 4OH⁻</li>
+                        </ul>
+                        <p><strong>金属的防护方法</strong>：</p>
+                        <ul>
+                            <li><strong>改变金属内部结构</strong>：如制成不锈钢</li>
+                            <li><strong>覆盖保护层</strong>：如涂油、喷漆、电镀等</li>
+                            <li><strong>电化学防护</strong>：</li>
+                            <ul>
+                                <li>牺牲阳极的阴极保护法：将被保护金属与更活泼的金属连接</li>
+                                <li>外加电流的阴极保护法：将被保护金属与电源负极连接</li>
+                            </ul>
+                        </ul>
+
+                        <h5>典型例题</h5>
+                        <div class="example">
+                            <h6>例题1：基础题</h6>
+                            <p>下列关于金属腐蚀的说法正确的是（ ）</p>
+                            <p>A. 金属腐蚀的本质是金属原子失去电子被氧化</p>
+                            <p>B. 金属腐蚀分为化学腐蚀和电化学腐蚀</p>
+                            <p>C. 电化学腐蚀比化学腐蚀更普遍</p>
+                            <p>D. 金属腐蚀都是有害的</p>
+                            <p><strong>答案</strong>：ABC</p>
+                            <p><strong>解析</strong>：金属腐蚀的本质是金属原子失去电子被氧化；金属腐蚀分为化学腐蚀和电化学腐蚀，其中电化学腐蚀更普遍；金属腐蚀在某些情况下也可以被利用，如金属的蚀刻。</p>
+                        </div>
+
+                        <div class="example">
+                            <h6>例题2：中等题</h6>
+                            <p>下列金属防护方法中，属于电化学防护的是（ ）</p>
+                            <p>A. 喷油漆</p>
+                            <p>B. 电镀</p>
+                            <p>C. 制成不锈钢</p>
+                            <p>D. 牺牲阳极的阴极保护法</p>
+                            <p><strong>答案</strong>：D</p>
+                            <p><strong>解析</strong>：喷油漆和电镀属于覆盖保护层；制成不锈钢属于改变金属内部结构；牺牲阳极的阴极保护法属于电化学防护。</p>
+                        </div>
+
+                        <div class="example">
+                            <h6>例题3：提高题</h6>
+                            <p>下列关于钢铁腐蚀的说法正确的是（ ）</p>
+                            <p>A. 钢铁在潮湿的空气中发生的主要是析氢腐蚀</p>
+                            <p>B. 钢铁在酸性环境中发生的主要是吸氧腐蚀</p>
+                            <p>C. 钢铁腐蚀的负极反应式为：Fe - 2e⁻ = Fe²⁺</p>
+                            <p>D. 牺牲阳极的阴极保护法中，牺牲的阳极是比钢铁更不活泼的金属</p>
+                            <p><strong>答案</strong>：C</p>
+                            <p><strong>解析</strong>：钢铁在潮湿的空气中发生的主要是吸氧腐蚀；在酸性环境中发生的主要是析氢腐蚀；钢铁腐蚀的负极反应式为Fe - 2e⁻ = Fe²⁺；牺牲阳极的阴极保护法中，牺牲的阳极是比钢铁更活泼的金属。</p>
+                        </div>
+
+                        <h5>常见错误分析</h5>
+                        <div class="error-analysis">
+                            <ul>
+                                <li><strong>错误1</strong>：认为金属腐蚀只发生在潮湿的环境中。实际上，干燥的环境中也会发生化学腐蚀。</li>
+                                <li><strong>错误2</strong>：混淆析氢腐蚀和吸氧腐蚀的条件。析氢腐蚀发生在酸性环境中，吸氧腐蚀发生在中性或弱酸性环境中。</li>
+                                <li><strong>错误3</strong>：错误选择牺牲阳极的材料。牺牲阳极必须是比被保护金属更活泼的金属。</li>
+                            </ul>
+                        </div>
+
+                        <h5>解题技巧总结</h5>
+                        <div class="tips">
+                            <ul>
+                                <li>判断金属腐蚀的类型：根据环境的酸碱性判断是析氢腐蚀还是吸氧腐蚀。</li>
+                                <li>选择金属防护方法：根据金属的用途和环境条件选择合适的防护方法。</li>
+                                <li>理解电化学防护的原理：牺牲阳极的阴极保护法利用原电池原理，外加电流的阴极保护法利用电解池原理。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
