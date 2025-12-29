@@ -1,6 +1,6 @@
 # Knowledge-Summary
 
-学习助手 - 一个基于纯HTML/CSS/JavaScript的在线学习平台，用于总结初中、高中各科目知识点。
+学习助手 - 一个基于纯HTML/CSS/JavaScript的在线学习平台，用于总结初中、高中各科目知识点
 
 ## 项目简介
 
